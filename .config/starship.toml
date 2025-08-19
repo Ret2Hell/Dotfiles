@@ -9,7 +9,7 @@ $directory\
 [](bg:yellow fg:peach)\
 $git_branch\
 $git_status\
-[](bg:green)\
+[](fg:green)\
 $c\
 $rust\
 $golang\
