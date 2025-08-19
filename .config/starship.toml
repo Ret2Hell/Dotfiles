@@ -21,7 +21,6 @@ $haskell\
 $python\
 [ ](fg:green)\
 $time\
-$cmd_duration\
 $line_break\
 $character"""
 
