@@ -19,12 +19,8 @@ $java\
 $kotlin\
 $haskell\
 $python\
-[](fg:green bg:lavender)\
+[ ](fg:green)\
 $time\
-[ ](fg:lavender)\
-$cmd_duration\
-$line_break\
-$character"""
 
 palette = 'catppuccin_mocha'
 
