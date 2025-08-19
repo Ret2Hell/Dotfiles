@@ -19,12 +19,8 @@ $java\
 $kotlin\
 $haskell\
 $python\
-[](fg:green bg:sapphire)\
-$conda\
-[](fg:sapphire bg:lavender)\
+[ ](fg:green)\
 $time\
-[ ](fg:lavender)\
-$cmd_duration\
 $line_break\
 $character"""
 
@@ -132,18 +128,6 @@ format = '[[ $symbol( $version)(\(#$virtualenv\)) ](fg:crust bg:green)]($style)'
 symbol = ""
 style = "bg:sapphire"
 format = '[[ $symbol( $context) ](fg:crust bg:sapphire)]($style)'
-
-[conda]
-symbol = "  "
-style = "fg:crust bg:sapphire"
-format = '[$symbol$environment ]($style)'
-ignore_base = false
-
-[time]
-disabled = false
-time_format = "%R"
-style = "bg:lavender"
-format = '[[  $time ](fg:crust bg:lavender)]($style)'
 
 [line_break]
 disabled = true
