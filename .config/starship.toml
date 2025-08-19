@@ -9,7 +9,7 @@ $directory\
 [](bg:yellow fg:peach)\
 $git_branch\
 $git_status\
-[](fg:yellow bg:green)\
+[](bg:green)\
 $c\
 $rust\
 $golang\
@@ -19,8 +19,6 @@ $java\
 $kotlin\
 $haskell\
 $python\
-[ ](fg:green)\
-$time\
 """
 
 palette = 'catppuccin_mocha'
