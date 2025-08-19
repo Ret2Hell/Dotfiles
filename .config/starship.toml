@@ -21,6 +21,7 @@ $haskell\
 $python\
 [ ](fg:green)\
 $time\
+"""
 
 palette = 'catppuccin_mocha'
 
