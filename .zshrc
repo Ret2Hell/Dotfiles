@@ -149,5 +149,4 @@ alias cd="z"
 alias grep="rg"
 alias rm="trash-put"
 
-
 eval "$(zoxide init zsh)"
