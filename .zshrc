@@ -141,7 +141,7 @@ export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 
 # alias
-alias ls="eza --icons -G"
+alias ls="lsd"
 alias update="sudo apt update && sudo apt upgrade -y"
 alias cat="batcat"
 alias cd="z"
