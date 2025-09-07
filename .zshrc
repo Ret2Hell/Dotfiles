@@ -154,3 +154,4 @@ eval $(thefuck --alias)
 
 # Generated for envman. Do not edit.
 [ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
+export PATH="$PATH:/opt/nvim-linux-x86_64/bin"
