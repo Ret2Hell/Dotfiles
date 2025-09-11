@@ -155,3 +155,11 @@ eval $(thefuck --alias)
 # Generated for envman. Do not edit.
 [ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
 export PATH="$PATH:/opt/nvim-linux-x86_64/bin"
+
+# pnpm
+export PNPM_HOME="/home/yassine/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
