@@ -3,7 +3,7 @@ font-size = 14
 font-thicken = true
 font-feature = "-calt,-liga,-dlig"
 adjust-cell-width = "-8%"
-background-opacity = 0.92
+background-opacity = 0.99
 background-blur-radius = 18
 selection-invert-fg-bg = true
 bold-is-bright = true
@@ -15,6 +15,7 @@ cursor-opacity = 0.85
 mouse-hide-while-typing = true
 window-decoration = none
 theme = Catppuccin Mocha
+
 
 
 
