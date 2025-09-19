@@ -1,5 +1,5 @@
 font-family = "JetBrainsMono Nerd Font Mono"
-font-size = 17
+font-size = 16
 font-thicken = true
 font-feature = "-calt,-liga,-dlig"
 adjust-cell-width = "-8%"
@@ -15,6 +15,7 @@ cursor-opacity = 0.85
 mouse-hide-while-typing = true
 window-decoration = none
 theme = Catppuccin Mocha
+
 
 
 
