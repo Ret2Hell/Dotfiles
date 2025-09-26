@@ -85,14 +85,10 @@ plugins=(
   zsh-autosuggestions
   docker
   docker-compose
-  bun
   ssh
   branch
   git-auto-fetch
-  nvm
-  npm
   terraform
-  azure
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -133,16 +129,9 @@ export NVM_DIR="$HOME/.nvm"
 
 . "$HOME/.local/bin/env"
 
-# bun completions
-[ -s "/home/yassine/.bun/_bun" ] && source "/home/yassine/.bun/_bun"
-
-# bun
-export BUN_INSTALL="$HOME/.bun"
-export PATH="$BUN_INSTALL/bin:$PATH"
-
 # alias
 alias ls="lsd"
-alias update="sudo apt update && sudo apt upgrade -y"
+alias update="sudo apt update && sudo apt full-upgrade -y"
 alias cat="batcat"
 alias cd="z"
 alias grep="rg"
@@ -163,7 +152,3 @@ case ":$PATH:" in
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 # pnpm end
-
-
-# Load Angular CLI autocompletion.
-source <(ng completion script)
