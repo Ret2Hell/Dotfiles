@@ -13,11 +13,8 @@ zstyle ':z4h:' auto-update-days '28'
 # Keyboard type: 'mac' or 'pc'.
 zstyle ':z4h:bindkey' keyboard  'pc'
 
-# Start tmux if not already in tmux.
-#zstyle ':z4h:' start-tmux command tmux -u new -A -D -t z4h
-
-# Whether to move prompt to the bottom when zsh starts and on Ctrl+L.
-zstyle ':z4h:' prompt-at-bottom 'no'
+# Don't start tmux.
+zstyle ':z4h:' start-tmux       no
 
 # Mark up shell's output with semantic information.
 zstyle ':z4h:' term-shell-integration 'yes'
@@ -95,111 +92,17 @@ compdef _directories md
 # Define named directories: ~w <=> Windows home directory on WSL.
 [[ -z $z4h_win_home ]] || hash -d w=$z4h_win_home
 
+
 # Set shell options: http://zsh.sourceforge.net/Doc/Release/Options.html.
 setopt glob_dots     # no special treatment for file names with a leading dot
 setopt no_auto_menu  # require an extra TAB press to open the completion menu
 
-# History control
-HISTCONTROL=ignoreboth
-HISTSIZE=32768
-HISTFILESIZE="${HISTSIZE}"
-
-# Ensure command hashing is off for mise
-set +h
-
-# File system
-if command -v eza &> /dev/null; then
-  alias ls='eza -lh --group-directories-first --icons=auto'
-  alias lsa='ls -a'
-  alias lt='eza --tree --level=2 --long --icons --git'
-  alias lta='lt -a'
-fi
-
-if command -v zoxide &> /dev/null; then
-  alias cd="zd"
-  zd() {
-    if [ $# -eq 0 ]; then
-      builtin cd ~ && return
-    elif [ -d "$1" ]; then
-      builtin cd "$1"
-    else
-      z "$@" && printf "\U000F17A9 " && pwd || echo "Error: Directory not found"
-    fi
-  }
-fi
-
-open() {
-  xdg-open "$@" >/dev/null 2>&1 &
-}
-
-# Directories
-alias ..='cd ..'
-alias ...='cd ../..'
-alias ....='cd ../../..'
-
-alias c='opencode'
-
-# Tools
-n() { if [ "$#" -eq 0 ]; then nvim .; else nvim "$@"; fi; }
-
-# Cat
-alias cat='bat'
-
-# Compression
-compress() { tar -czf "${1%/}.tar.gz" "${1%/}"; }
-alias decompress="tar -xzf"
-
-# Format an entire drive for a single partition using exFAT
-format-drive() {
-  if [ $# -ne 2 ]; then
-    echo "Usage: format-drive <device> <name>"
-    echo "Example: format-drive /dev/sda 'My Stuff'"
-    echo -e "\nAvailable drives:"
-    lsblk -d -o NAME -n | awk '{print "/dev/"$1}'
-  else
-    echo "WARNING: This will completely erase all data on $1 and label it '$2'."
-    read -rp "Are you sure you want to continue? (y/N): " confirm
-
-    if [[ "$confirm" =~ ^[Yy]$ ]]; then
-      sudo wipefs -a "$1"
-      sudo dd if=/dev/zero of="$1" bs=1M count=100 status=progress
-      sudo parted -s "$1" mklabel gpt
-      sudo parted -s "$1" mkpart primary 1MiB 100%
-
-      partition="$([[ $1 == *"nvme"* ]] && echo "${1}p1" || echo "${1}1")"
-      sudo partprobe "$1" || true
-      sudo udevadm settle || true
-
-      sudo mkfs.exfat -n "$2" "$partition"
-
-      echo "Drive $1 formatted as exFAT and labeled '$2'."
-    fi
-  fi
-}
-
-if command -v mise &> /dev/null; then
-  eval "$(mise activate zsh)"
-fi
-
-if command -v zoxide &> /dev/null; then
-  eval "$(zoxide init zsh)"
-fi
-
-if command -v try &> /dev/null; then
-  eval "$(try init ~/Work/tries)"
-fi
-
-source ~/.local/share/omarchy/default/bash/envs
-. "$HOME/.local/share/../bin/env"
+# If not running interactively, don't do anything
+[[ $- != *i* ]] && return
 
 
+# Load shared shell configuration (aliases, functions, environment, tool init)
+[[ -f /usr/share/omarchy-zsh/shell/all ]] && source /usr/share/omarchy-zsh/shell/all
 
-export PATH=$PATH:/home/ret2hell/.spicetify
-
-if [ -z "$SSH_AUTH_SOCK" ]; then
-    # No agent running → start one
-    eval "$(ssh-agent -s)" > /dev/null
-fi
-ssh-add ~/.ssh/id_ed25519 2>/dev/null
-ssh-add ~/.ssh/id_ed25519_work     2>/dev/null
-
+# Load personal shell configuration (aliases, functions, environment, tool init)
+[[ -f $HOME/.config/zsh/all ]] && source $HOME/.config/zsh/all

@@ -1,0 +1,1 @@
+export PATH="$HOME/.cache/.bun/bin:$PATH"
