@@ -1,5 +1,6 @@
+[user]
+  name = Ret2Hell
+  email = tayeb1920@gmail.com
+
 [includeIf "gitdir:/home/ret2hell/Work/github.com/raiselabs-mohamed/"]
   path = ~/.gitconfig-work
-[user]
-	email = tayeb1920@gmail.com
-	name = Ret2Hell
