@@ -1,9 +1,7 @@
 sw_volume: 100
 audio_device_state:1:My Pulse Output
 audio_device_state:1:my_fifo
-state: pause
-current: 46
-time: 97.057
+state: stop
 random: 0
 repeat: 1
 single: 0
@@ -13,69 +11,4 @@ mixrampdb: 0
 mixrampdelay: -1
 lastloadedplaylist: 
 playlist_begin
-0:Bruno Mars - Locked out of Heaven.mp3
-1:Suprême NTM, Sofiane - Sur le drapeau.mp3
-2:Billie Eilish - bellyache.mp3
-3:Arctic Monkeys - Four Out Of Five.mp3
-4:Eliza Shaddad - Don't Let Me Be Misunderstood.mp3
-5:Billie Eilish - everything i wanted.mp3
-6:Lomepal - À peu près.mp3
-7:Wael Jassar - Mawjou3.mp3
-8:Warda - Batwanes Beek.mp3
-9:EMP1RE - DENYA.mp3
-10:GIMS, DYSTINCT - SPIDER.mp3
-11:GIMS - SOIS PAS TIMIDE.mp3
-12:Marilyne Naaman - the winner takes it all (live at o beirut).mp3
-13:Jean-Marie Riachi, Julio Iglesias - Je n'ai pas changé.mp3
-14:Cigarettes After Sex - Cry.mp3
-15:PNL - A l'ammoniaque.mp3
-16:Tyler, The Creator, Kali Uchis - See You Again (feat. Kali Uchis).mp3
-17:Sasha Alex Sloan - Dancing With Your Ghost.mp3
-18:Marilyne Naaman - mourir sur scène (live at casino du liban).mp3
-19:Damiano David - Nothing Breaks Like a Heart - Spotify Singles.mp3
-20:DJ Khaled, Rihanna, Bryson Tiller - Wild Thoughts (feat. Rihanna & Bryson Tiller).mp3
-21:Måneskin - THE LONELIEST.mp3
-22:The xx - Sunset.mp3
-23:Calvin Harris, Ellie Goulding - Outside (feat. Ellie Goulding).mp3
-24:Martin Arteta, creamy - Past Lives.mp3
-25:Sherine - 3la Bali.mp3
-26:Dean Lewis - Waves.mp3
-27:VEN1 - Hakayet.mp3
-28:Nadine Tayseer - ميدلي فضل شاكر.mp3
-29:Pixies - Here Comes Your Man.mp3
-30:Arctic Monkeys - I Bet You Look Good On The Dancefloor.mp3
-31:Benson Boone - Ghost Town.mp3
-32:ROSALÍA, Yahritza Y Su Esencia - La Perla.mp3
-33:New West - Those Eyes.mp3
-34:Wael Jassar - Betewhasheiny.mp3
-35:Dinah Washington - What A Diff'rence A Day Made.mp3
-36:Seafret - Atlantis.mp3
-37:Cairokee - كل حاجة بتعدي - كايروكي من الاستوديو.mp3
-38:Billie Eilish - TV.mp3
-39:Cairokee - Ana Negm.mp3
-40:The Smiths - There Is a Light That Never Goes Out - 2011 Remaster.mp3
-41:Sherine - Btmanna Ansak.mp3
-42:Billie Eilish - L’AMOUR DE MA VIE.mp3
-43:ElGrandeToto - BLUE LOVE.mp3
-44:Nancy Ajram - Mestanyak.mp3
-45:The xx - Fiction.mp3
-46:Cairokee - Basrah w Atooh.mp3
-47:Kendrick Lamar, SZA - All The Stars (with SZA) - From 'Black Panther- The Album'.mp3
-48:Roy Orbison - In Dreams.mp3
-49:The Police - Every Breath You Take.mp3
-50:Damiano David - The First Time.mp3
-51:Olivia Dean - So Easy (To Fall In Love).mp3
-52:Frank Sinatra - Rain In My Heart.mp3
-53:Billie Eilish - WILDFLOWER.mp3
-54:Sofiane - Mon p'tit loup.mp3
-55:Future - I'M DAT N.mp3
-56:Billie Eilish - THE GREATEST.mp3
-57:Keane - Somewhere Only We Know.mp3
-58:Billie Eilish - CHIHIRO.mp3
-59:DJ Shadow, Mos Def - Six Days - Remix.mp3
-60:Taylor Swift - The Fate of Ophelia.mp3
-61:Swedish House Mafia, The Weeknd - Moth To A Flame (with The Weeknd).mp3
-62:Måneskin, Tom Morello - GOSSIP (feat. Tom Morello).mp3
-63:Fadel Chaker - Ahla Rasma.mp3
-64:Sofiane - Lundi.mp3
 playlist_end

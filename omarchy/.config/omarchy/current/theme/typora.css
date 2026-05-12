@@ -1,0 +1,146 @@
+@import "night/mermaid.dark.css";
+@import "night/codeblock.dark.css";
+@import "night/sourcemode.dark.css";
+
+:root {
+    --bg-color: #;
+    --side-bar-bg-color: #;
+    --text-color: #;
+
+    --select-text-bg-color: #;
+
+    --item-hover-bg-color: #;
+    --control-text-color: #;
+    --control-text-hover-color: #;
+    --window-border: 1px solid #;
+
+    --active-file-bg-color: #;
+    --active-file-border-color: #;
+
+    --primary-color: #;
+
+    --active-file-text-color: #;
+    --item-hover-text-color: #;
+
+    --rawblock-edit-panel-bd: #;
+
+    --search-select-bg-color: #;
+}
+
+html {
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+}
+
+html,
+body {
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    background: #;
+    background: var(--bg-color);
+    fill: currentColor;
+    line-height: 1.625rem;
+}
+
+#write {
+    max-width: 914px;
+}
+
+@media only screen and (min-width: 1400px) {
+    #write {
+        max-width: 1024px;
+    }
+}
+
+@media only screen and (min-width: 1800px) {
+    #write {
+        max-width: 1200px;
+    }
+}
+
+html,
+body,
+button,
+input,
+select,
+textarea,
+div.code-tooltip-content {
+    color: #;
+    border-color: transparent;
+}
+
+div.code-tooltip,
+.md-hover-tip .md-arrow:after {
+    background: #;
+}
+
+.native-window #md-notification {
+    border: 1px solid #;
+}
+
+.popover.bottom > .arrow:after {
+    border-bottom-color: #;
+}
+
+html,
+body,
+button,
+input,
+select,
+textarea {
+    font-family: "Inter", "SF Pro", -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+hr {
+    height: 2px;
+    border: 0;
+    margin: 24px 0 !important;
+}
+
+/* Headers */
+h1, h2, h3, h4, h5, h6 {
+    font-family: "SF Pro", "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+    color: #;
+}
+
+/* Links */
+a {
+    color: #;
+}
+
+/* Code */
+code, pre, .md-fences {
+    font-family: "JetBrainsMono Nerd Font", "Fira Code", monospace;
+    background: #;
+}
+
+/* Inline code */
+code {
+    color: #;
+    padding: 2px 4px;
+    border-radius: 4px;
+}
+
+/* Blockquotes */
+blockquote {
+    border-left: 4px solid #;
+    color: #;
+}
+
+/* Tables */
+table tr:nth-child(2n) {
+    background: #;
+}
+
+table th {
+    background: #;
+}
+
+/* Scrollbars */
+::-webkit-scrollbar-thumb {
+    background: #;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #;
+}
