@@ -1,0 +1,51 @@
+return {
+	"epwalsh/obsidian.nvim",
+	version = "*",
+	lazy = true,
+	ft = "markdown",
+	cmd = {
+		"ObsidianBacklinks",
+		"ObsidianDailies",
+		"ObsidianExtractNote",
+		"ObsidianFollowLink",
+		"ObsidianLink",
+		"ObsidianLinkNew",
+		"ObsidianLinks",
+		"ObsidianNew",
+		"ObsidianNewFromTemplate",
+		"ObsidianOpen",
+		"ObsidianPasteImg",
+		"ObsidianQuickSwitch",
+		"ObsidianRename",
+		"ObsidianSearch",
+		"ObsidianTags",
+		"ObsidianTemplate",
+		"ObsidianToday",
+		"ObsidianToggleCheckbox",
+		"ObsidianTomorrow",
+		"ObsidianTOC",
+		"ObsidianYesterday",
+	},
+	keys = {
+		{ "<leader>ob", "<cmd>ObsidianBacklinks<CR>", desc = "Obsidian backlinks" },
+		{ "<leader>oc", function() require("obsidian").util.toggle_checkbox() end, desc = "Toggle checkbox" },
+		{ "<leader>od", "<cmd>ObsidianToday<CR>", desc = "Obsidian daily note" },
+		{ "<leader>oi", function() require("config.obsidian").new_idea() end, desc = "New idea note" },
+		{ "<leader>ol", "<cmd>ObsidianLinks<CR>", desc = "Obsidian note links" },
+		{ "<leader>oo", "<cmd>ObsidianOpen<CR>", desc = "Open in Obsidian" },
+		{ "<leader>oq", "<cmd>ObsidianQuickSwitch<CR>", desc = "Obsidian quick switch" },
+		{ "<leader>os", "<cmd>ObsidianSearch<CR>", desc = "Search Obsidian notes" },
+		{ "<leader>ot", "<cmd>ObsidianTemplate<CR>", desc = "Insert Obsidian template" },
+		{ "<leader>oT", "<cmd>ObsidianTOC<CR>", desc = "Obsidian table of contents" },
+	},
+	dependencies = {
+		"nvim-lua/plenary.nvim",
+		"nvim-telescope/telescope.nvim",
+	},
+	opts = function()
+		return require("config.obsidian").opts()
+	end,
+	config = function(_, opts)
+		require("obsidian").setup(opts)
+	end,
+}

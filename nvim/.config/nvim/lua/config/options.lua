@@ -4,3 +4,5 @@
 vim.opt.relativenumber = false
 
 vim.g.lazyvim_python_lsp = "ty"
+
+vim.lsp.enable("oxlint")
