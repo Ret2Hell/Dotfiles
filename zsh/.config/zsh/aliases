@@ -3,3 +3,6 @@ alias copy='wl-copy'
 
 # Bat
 alias cat='bat'
+
+# pi
+alias ipi='tdl pi'
