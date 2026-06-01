@@ -33,6 +33,7 @@ return {
 		{ "<leader>oi", function() require("config.obsidian").new_idea() end, desc = "New idea note" },
 		{ "<leader>ol", "<cmd>ObsidianLinks<CR>", desc = "Obsidian note links" },
 		{ "<leader>oo", "<cmd>ObsidianOpen<CR>", desc = "Open in Obsidian" },
+		{ "<leader>op", "<cmd>ObsidianPasteImg<CR>", desc = "Paste image from clipboard" },
 		{ "<leader>oq", "<cmd>ObsidianQuickSwitch<CR>", desc = "Obsidian quick switch" },
 		{ "<leader>os", "<cmd>ObsidianSearch<CR>", desc = "Search Obsidian notes" },
 		{ "<leader>ot", "<cmd>ObsidianTemplate<CR>", desc = "Insert Obsidian template" },
