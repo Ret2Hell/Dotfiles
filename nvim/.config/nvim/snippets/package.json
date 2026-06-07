@@ -1,0 +1,11 @@
+{
+  "name": "ret2hell-nvim-snippets",
+  "contributes": {
+    "snippets": [
+      {
+        "language": "go",
+        "path": "./go.json"
+      }
+    ]
+  }
+}

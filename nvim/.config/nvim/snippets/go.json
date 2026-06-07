@@ -1,0 +1,124 @@
+{
+  "if err return err": {
+    "prefix": "ie",
+    "body": [
+      "if err != nil {",
+      "\treturn err",
+      "}"
+    ],
+    "description": "Return err when err is not nil"
+  },
+  "if err return nil err": {
+    "prefix": "ien",
+    "body": [
+      "if err != nil {",
+      "\treturn nil, err",
+      "}"
+    ],
+    "description": "Return nil and err when err is not nil"
+  },
+  "if err return zero err": {
+    "prefix": "iez",
+    "body": [
+      "if err != nil {",
+      "\treturn ${1:nil}, err",
+      "}"
+    ],
+    "description": "Return a custom zero value and err"
+  },
+  "if err wrapped": {
+    "prefix": "ief",
+    "body": [
+      "if err != nil {",
+      "\treturn fmt.Errorf(\"${1:failed to ${2:do thing}}: %w\", err)",
+      "}"
+    ],
+    "description": "Return a wrapped error with fmt.Errorf"
+  },
+  "if err log fatal": {
+    "prefix": "iel",
+    "body": [
+      "if err != nil {",
+      "\tlog.Fatal(err)",
+      "}"
+    ],
+    "description": "Log fatal when err is not nil"
+  },
+  "context background": {
+    "prefix": "cbg",
+    "body": [
+      "ctx := context.Background()"
+    ],
+    "description": "Create a background context"
+  },
+  "test function": {
+    "prefix": "te",
+    "body": [
+      "func Test${1:Name}(t *testing.T) {",
+      "\t${0}",
+      "}"
+    ],
+    "description": "Create a Go test function"
+  },
+  "subtest": {
+    "prefix": "st",
+    "body": [
+      "t.Run(\"${1:case}\", func(t *testing.T) {",
+      "\t${0}",
+      "})"
+    ],
+    "description": "Create a Go subtest"
+  },
+  "table test": {
+    "prefix": "tt",
+    "body": [
+      "func Test${1:Name}(t *testing.T) {",
+      "\ttests := []struct {",
+      "\t\tname string",
+      "\t}{",
+      "\t\t{",
+      "\t\t\tname: \"${2:case}\",",
+      "\t\t},",
+      "\t}",
+      "",
+      "\tfor _, tt := range tests {",
+      "\t\tt.Run(tt.name, func(t *testing.T) {",
+      "\t\t\t${0}",
+      "\t\t})",
+      "\t}",
+      "}"
+    ],
+    "description": "Create a table-driven Go test"
+  },
+  "benchmark function": {
+    "prefix": "be",
+    "body": [
+      "func Benchmark${1:Name}(b *testing.B) {",
+      "\tfor i := 0; i < b.N; i++ {",
+      "\t\t${0}",
+      "\t}",
+      "}"
+    ],
+    "description": "Create a Go benchmark"
+  },
+  "main function": {
+    "prefix": "ma",
+    "body": [
+      "package main",
+      "",
+      "func main() {",
+      "\t${0}",
+      "}"
+    ],
+    "description": "Create a main function"
+  },
+  "http handler": {
+    "prefix": "ha",
+    "body": [
+      "func ${1:handler}(w http.ResponseWriter, r *http.Request) {",
+      "\t${0}",
+      "}"
+    ],
+    "description": "Create an HTTP handler function"
+  }
+}
