@@ -1,0 +1,87 @@
+onboarding = false
+
+[theme]
+name = "terminal"
+
+[terminal]
+default_shell = "zsh"
+shell_mode = "auto"
+new_cwd = "follow"
+
+[keys]
+prefix = "ctrl+space"
+
+help = "prefix+?"
+detach = "prefix+q"
+reload_config = "prefix+shift+q"
+
+new_workspace = "prefix+shift+c"
+rename_workspace = "prefix+shift+r"
+close_workspace = "prefix+shift+d"
+previous_workspace = "alt+up"
+next_workspace = "alt+down"
+
+new_tab = "prefix+c"
+rename_tab = "prefix+r"
+close_tab = "prefix+k"
+previous_tab = ["prefix+p", "alt+left"]
+next_tab = ["prefix+n", "alt+right"]
+switch_tab = "alt+1..9"
+
+focus_pane_left = ["prefix+left", "ctrl+alt+left"]
+focus_pane_down = ["prefix+down", "ctrl+alt+down"]
+focus_pane_up = ["prefix+up", "ctrl+alt+up"]
+focus_pane_right = ["prefix+right", "ctrl+alt+right"]
+split_vertical = "prefix+v"
+split_horizontal = "prefix+h"
+close_pane = "prefix+x"
+zoom = "prefix+z"
+resize_mode = "prefix+shift+z"
+toggle_sidebar = "prefix+b"
+
+[[keys.command]]
+key = "ctrl+alt+shift+left"
+type = "shell"
+command = '${HERDR_BIN_PATH:-herdr} pane resize --pane "$HERDR_ACTIVE_PANE_ID" --direction left --amount 5'
+description = "resize pane left"
+
+[[keys.command]]
+key = "ctrl+alt+shift+down"
+type = "shell"
+command = '${HERDR_BIN_PATH:-herdr} pane resize --pane "$HERDR_ACTIVE_PANE_ID" --direction down --amount 5'
+description = "resize pane down"
+
+[[keys.command]]
+key = "ctrl+alt+shift+up"
+type = "shell"
+command = '${HERDR_BIN_PATH:-herdr} pane resize --pane "$HERDR_ACTIVE_PANE_ID" --direction up --amount 5'
+description = "resize pane up"
+
+[[keys.command]]
+key = "ctrl+alt+shift+right"
+type = "shell"
+command = '${HERDR_BIN_PATH:-herdr} pane resize --pane "$HERDR_ACTIVE_PANE_ID" --direction right --amount 5'
+description = "resize pane right"
+
+[ui]
+mouse_capture = false
+prompt_new_tab_name = false
+show_agent_labels_on_pane_borders = true
+agent_panel_scope = "all"
+accent = "blue"
+
+[ui.toast]
+delivery = "system"
+delay_seconds = 1
+
+[ui.sound]
+enabled = true
+
+[session]
+resume_agents_on_restore = true
+
+[experimental]
+pane_history = false
+
+[advanced]
+scrollback_limit_bytes = 50000000

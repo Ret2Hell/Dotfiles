@@ -1,0 +1,85 @@
+h() {
+  if (( $# == 0 )); then
+    if [[ ${HERDR_ENV:-} == 1 ]]; then
+      print -r -- "Already inside Herdr."
+      return 0
+    fi
+
+    command herdr
+    return
+  fi
+
+  command herdr "$@"
+}
+
+__herdr_last_pane_id_from_json() {
+  jq -r '[.. | objects | select(has("pane_id")) | .pane_id] | last // empty'
+}
+
+hdl() {
+  emulate -L zsh
+
+  if (( $# < 1 )); then
+    print -u2 -r -- "Usage: hdl <c|pi|opencode|other_ai> [<second_ai>]"
+    return 1
+  fi
+
+  if [[ ${HERDR_ENV:-} != 1 || -z ${HERDR_PANE_ID:-} ]]; then
+    print -u2 -r -- "You must start Herdr with h before using hdl."
+    return 1
+  fi
+
+  local current_dir=${PWD}
+  local editor_pane=${HERDR_PANE_ID}
+  local current_tab=${HERDR_TAB_ID:-}
+  local label=${current_dir:t}
+  local ai=$1
+  local ai2=${2:-}
+  local split_json ai_pane ai2_pane editor_cmd
+
+  if [[ -n $current_tab ]]; then
+    command herdr tab rename "$current_tab" "$label" >/dev/null 2>&1 || true
+  fi
+
+  if ! split_json=$(command herdr pane split --pane "$editor_pane" --direction right --ratio 0.7 --cwd "$current_dir" --focus 2>&1); then
+    print -u2 -r -- "$split_json"
+    return 1
+  fi
+
+  ai_pane=$(print -r -- "$split_json" | __herdr_last_pane_id_from_json)
+  if [[ -z $ai_pane ]]; then
+    print -u2 -r -- "Could not determine the new Herdr AI pane id."
+    print -u2 -r -- "$split_json"
+    return 1
+  fi
+
+  if [[ -n $ai2 ]]; then
+    if ! split_json=$(command herdr pane split --pane "$ai_pane" --direction down --ratio 0.5 --cwd "$current_dir" --focus 2>&1); then
+      print -u2 -r -- "$split_json"
+      return 1
+    fi
+
+    ai2_pane=$(print -r -- "$split_json" | __herdr_last_pane_id_from_json)
+    if [[ -z $ai2_pane ]]; then
+      print -u2 -r -- "Could not determine the second Herdr AI pane id."
+      print -u2 -r -- "$split_json"
+      return 1
+    fi
+
+    command herdr pane run "$ai2_pane" "$ai2" >/dev/null
+  fi
+
+  command herdr pane run "$ai_pane" "$ai" >/dev/null
+  command herdr pane focus --pane "$ai_pane" --direction left >/dev/null 2>&1 || true
+
+  editor_cmd=${EDITOR:-nvim}
+  ${=editor_cmd} .
+}
+
+hc() {
+  hdl c "$@"
+}
+
+hp() {
+  hdl pi "$@"
+}
