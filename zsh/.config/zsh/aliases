@@ -6,3 +6,6 @@ alias cat='bat'
 
 # pi
 alias ipi='tdl pi'
+
+# jiratui
+alias j="jiratui"

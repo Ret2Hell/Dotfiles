@@ -39,37 +39,14 @@ zoom = "prefix+z"
 resize_mode = "prefix+shift+z"
 toggle_sidebar = "prefix+b"
 
-[[keys.command]]
-key = "ctrl+alt+shift+left"
-type = "shell"
-command = '${HERDR_BIN_PATH:-herdr} pane resize --pane "$HERDR_ACTIVE_PANE_ID" --direction left --amount 5'
-description = "resize pane left"
-
-[[keys.command]]
-key = "ctrl+alt+shift+down"
-type = "shell"
-command = '${HERDR_BIN_PATH:-herdr} pane resize --pane "$HERDR_ACTIVE_PANE_ID" --direction down --amount 5'
-description = "resize pane down"
-
-[[keys.command]]
-key = "ctrl+alt+shift+up"
-type = "shell"
-command = '${HERDR_BIN_PATH:-herdr} pane resize --pane "$HERDR_ACTIVE_PANE_ID" --direction up --amount 5'
-description = "resize pane up"
-
-[[keys.command]]
-key = "ctrl+alt+shift+right"
-type = "shell"
-command = '${HERDR_BIN_PATH:-herdr} pane resize --pane "$HERDR_ACTIVE_PANE_ID" --direction right --amount 5'
-description = "resize pane right"
-
 [ui]
-mouse_capture = false
+mouse_capture = true
 prompt_new_tab_name = false
 show_agent_labels_on_pane_borders = true
 agent_panel_scope = "all"
 accent = "blue"
 
+agent_panel_sort = "spaces"
 [ui.toast]
 delivery = "system"
 delay_seconds = 1
