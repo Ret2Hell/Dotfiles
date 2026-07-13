@@ -1,0 +1,111 @@
+# Generated from Omarchy's miasma colors.
+# This is a persistent profile: edit it if you want per-theme customizations.
+
+[app]
+overall = { bg = "#222222" }
+
+[mgr]
+cwd = { fg = "#c9a554" }
+find_keyword = { fg = "#b36d43", bold = true }
+find_position = { fg = "#bb7744", italic = true }
+marker_copied = { fg = "#5f875f", bg = "#5f875f" }
+marker_cut = { fg = "#685742", bg = "#685742" }
+marker_marked = { fg = "#c9a554", bg = "#c9a554" }
+marker_selected = { fg = "#78824b", bg = "#78824b" }
+count_copied = { fg = "#c2c2b0", bg = "#5f875f" }
+count_cut = { fg = "#c2c2b0", bg = "#685742" }
+count_selected = { fg = "#c2c2b0", bg = "#78824b" }
+border_symbol = "│"
+border_style = { fg = "#666666" }
+
+[tabs]
+active = { fg = "#c2c2b0", bg = "#78824b", bold = true }
+inactive = { fg = "#c2c2b0", bg = "#000000" }
+
+[mode]
+normal_main = { fg = "#c2c2b0", bg = "#78824b", bold = true }
+normal_alt = { fg = "#78824b", bg = "#000000" }
+select_main = { fg = "#c2c2b0", bg = "#5f875f", bold = true }
+select_alt = { fg = "#5f875f", bg = "#000000" }
+unset_main = { fg = "#c2c2b0", bg = "#685742", bold = true }
+unset_alt = { fg = "#685742", bg = "#000000" }
+
+[indicator]
+parent = { fg = "#c2c2b0", bg = "#c2c2b0" }
+current = { fg = "#c2c2b0", bg = "#78824b" }
+preview = { fg = "#c2c2b0", bg = "#c2c2b0" }
+
+[status]
+sep_left = { open = "", close = "" }
+sep_right = { open = "", close = "" }
+progress_label = { fg = "#c2c2b0", bold = true }
+progress_normal = { fg = "#5f875f", bg = "#000000" }
+progress_error = { fg = "#b36d43", bg = "#685742" }
+perm_type = { fg = "#78824b" }
+perm_read = { fg = "#b36d43" }
+perm_write = { fg = "#685742" }
+perm_exec = { fg = "#5f875f" }
+perm_sep = { fg = "#666666" }
+
+[input]
+border = { fg = "#78824b" }
+title = { fg = "#c2c2b0" }
+value = { fg = "#c2c2b0" }
+selected = { fg = "#c2c2b0", bg = "#78824b" }
+
+[pick]
+border = { fg = "#78824b" }
+active = { fg = "#bb7744", bold = true }
+inactive = { fg = "#c2c2b0" }
+
+[confirm]
+border = { fg = "#78824b" }
+title = { fg = "#78824b" }
+body = { fg = "#c2c2b0" }
+btn_yes = { fg = "#c2c2b0", bg = "#5f875f" }
+btn_no = { fg = "#c2c2b0", bg = "#685742" }
+
+[cmp]
+border = { fg = "#78824b" }
+
+[tasks]
+border = { fg = "#78824b" }
+title = { fg = "#c2c2b0" }
+hovered = { fg = "#bb7744", bold = true }
+
+[which]
+mask = { bg = "#000000" }
+cand = { fg = "#c9a554" }
+rest = { fg = "#666666" }
+desc = { fg = "#bb7744" }
+separator = "    "
+separator_style = { fg = "#666666" }
+
+[help]
+on = { fg = "#c9a554" }
+run = { fg = "#bb7744" }
+desc = { fg = "#666666" }
+hovered = { fg = "#c2c2b0", bg = "#000000", bold = true }
+footer = { fg = "#c2c2b0", bg = "#000000" }
+
+[notify]
+title_info = { fg = "#c9a554" }
+title_warn = { fg = "#b36d43" }
+title_error = { fg = "#685742" }
+
+[spot]
+border = { fg = "#78824b" }
+title = { fg = "#78824b" }
+tbl_cell = { fg = "#c2c2b0", bg = "#78824b" }
+tbl_col = { fg = "#c2c2b0", bold = true }
+
+[filetype]
+rules = [
+	{ mime = "image/*", fg = "#b36d43" },
+	{ mime = "{audio,video}/*", fg = "#bb7744" },
+	{ mime = "application/{zip,rar,7z*,tar,gzip,xz,zstd,bzip*,lzma,compress,archive,cpio}", fg = "#685742" },
+	{ mime = "application/{pdf,doc,rtf}", fg = "#c9a554" },
+	{ url = "*", is = "orphan", fg = "#685742" },
+	{ url = "*", is = "exec", fg = "#5f875f" },
+	{ url = "*/", fg = "#78824b" },
+]

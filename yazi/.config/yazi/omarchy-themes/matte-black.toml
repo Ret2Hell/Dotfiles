@@ -1,0 +1,111 @@
+# Generated from Omarchy's matte-black colors.
+# This is a persistent profile: edit it if you want per-theme customizations.
+
+[app]
+overall = { bg = "#121212" }
+
+[mgr]
+cwd = { fg = "#bebebe" }
+find_keyword = { fg = "#b91c1c", bold = true }
+find_position = { fg = "#D35F5F", italic = true }
+marker_copied = { fg = "#FFC107", bg = "#FFC107" }
+marker_cut = { fg = "#D35F5F", bg = "#D35F5F" }
+marker_marked = { fg = "#bebebe", bg = "#bebebe" }
+marker_selected = { fg = "#e68e0d", bg = "#e68e0d" }
+count_copied = { fg = "#bebebe", bg = "#FFC107" }
+count_cut = { fg = "#bebebe", bg = "#D35F5F" }
+count_selected = { fg = "#bebebe", bg = "#e68e0d" }
+border_symbol = "│"
+border_style = { fg = "#8a8a8d" }
+
+[tabs]
+active = { fg = "#bebebe", bg = "#515151", bold = true }
+inactive = { fg = "#bebebe", bg = "#333333" }
+
+[mode]
+normal_main = { fg = "#bebebe", bg = "#e68e0d", bold = true }
+normal_alt = { fg = "#e68e0d", bg = "#333333" }
+select_main = { fg = "#bebebe", bg = "#FFC107", bold = true }
+select_alt = { fg = "#FFC107", bg = "#333333" }
+unset_main = { fg = "#bebebe", bg = "#D35F5F", bold = true }
+unset_alt = { fg = "#D35F5F", bg = "#333333" }
+
+[indicator]
+parent = { fg = "#bebebe", bg = "#bebebe" }
+current = { fg = "#bebebe", bg = "#e68e0d" }
+preview = { fg = "#bebebe", bg = "#bebebe" }
+
+[status]
+sep_left = { open = "", close = "" }
+sep_right = { open = "", close = "" }
+progress_label = { fg = "#bebebe", bold = true }
+progress_normal = { fg = "#FFC107", bg = "#333333" }
+progress_error = { fg = "#b91c1c", bg = "#D35F5F" }
+perm_type = { fg = "#e68e0d" }
+perm_read = { fg = "#b91c1c" }
+perm_write = { fg = "#D35F5F" }
+perm_exec = { fg = "#FFC107" }
+perm_sep = { fg = "#8a8a8d" }
+
+[input]
+border = { fg = "#e68e0d" }
+title = { fg = "#bebebe" }
+value = { fg = "#bebebe" }
+selected = { fg = "#bebebe", bg = "#515151" }
+
+[pick]
+border = { fg = "#e68e0d" }
+active = { fg = "#D35F5F", bold = true }
+inactive = { fg = "#bebebe" }
+
+[confirm]
+border = { fg = "#e68e0d" }
+title = { fg = "#e68e0d" }
+body = { fg = "#bebebe" }
+btn_yes = { fg = "#bebebe", bg = "#FFC107" }
+btn_no = { fg = "#bebebe", bg = "#D35F5F" }
+
+[cmp]
+border = { fg = "#e68e0d" }
+
+[tasks]
+border = { fg = "#e68e0d" }
+title = { fg = "#bebebe" }
+hovered = { fg = "#D35F5F", bold = true }
+
+[which]
+mask = { bg = "#333333" }
+cand = { fg = "#bebebe" }
+rest = { fg = "#8a8a8d" }
+desc = { fg = "#D35F5F" }
+separator = "    "
+separator_style = { fg = "#8a8a8d" }
+
+[help]
+on = { fg = "#bebebe" }
+run = { fg = "#D35F5F" }
+desc = { fg = "#8a8a8d" }
+hovered = { fg = "#bebebe", bg = "#333333", bold = true }
+footer = { fg = "#bebebe", bg = "#333333" }
+
+[notify]
+title_info = { fg = "#bebebe" }
+title_warn = { fg = "#b91c1c" }
+title_error = { fg = "#D35F5F" }
+
+[spot]
+border = { fg = "#e68e0d" }
+title = { fg = "#e68e0d" }
+tbl_cell = { fg = "#bebebe", bg = "#515151" }
+tbl_col = { fg = "#bebebe", bold = true }
+
+[filetype]
+rules = [
+	{ mime = "image/*", fg = "#b91c1c" },
+	{ mime = "{audio,video}/*", fg = "#D35F5F" },
+	{ mime = "application/{zip,rar,7z*,tar,gzip,xz,zstd,bzip*,lzma,compress,archive,cpio}", fg = "#D35F5F" },
+	{ mime = "application/{pdf,doc,rtf}", fg = "#bebebe" },
+	{ url = "*", is = "orphan", fg = "#D35F5F" },
+	{ url = "*", is = "exec", fg = "#FFC107" },
+	{ url = "*/", fg = "#e68e0d" },
+]

@@ -1,0 +1,111 @@
+# Generated from Omarchy's flexoki-light colors.
+# This is a persistent profile: edit it if you want per-theme customizations.
+
+[app]
+overall = { bg = "#FFFCF0" }
+
+[mgr]
+cwd = { fg = "#3AA99F" }
+find_keyword = { fg = "#D0A215", bold = true }
+find_position = { fg = "#CE5D97", italic = true }
+marker_copied = { fg = "#879A39", bg = "#879A39" }
+marker_cut = { fg = "#D14D41", bg = "#D14D41" }
+marker_marked = { fg = "#3AA99F", bg = "#3AA99F" }
+marker_selected = { fg = "#205EA6", bg = "#205EA6" }
+count_copied = { fg = "#100F0F", bg = "#879A39" }
+count_cut = { fg = "#100F0F", bg = "#D14D41" }
+count_selected = { fg = "#100F0F", bg = "#205EA6" }
+border_symbol = "│"
+border_style = { fg = "#100F0F" }
+
+[tabs]
+active = { fg = "#100F0F", bg = "#CECDC3", bold = true }
+inactive = { fg = "#100F0F", bg = "#DAD8CE" }
+
+[mode]
+normal_main = { fg = "#100F0F", bg = "#205EA6", bold = true }
+normal_alt = { fg = "#205EA6", bg = "#DAD8CE" }
+select_main = { fg = "#100F0F", bg = "#879A39", bold = true }
+select_alt = { fg = "#879A39", bg = "#DAD8CE" }
+unset_main = { fg = "#100F0F", bg = "#D14D41", bold = true }
+unset_alt = { fg = "#D14D41", bg = "#DAD8CE" }
+
+[indicator]
+parent = { fg = "#100F0F", bg = "#100F0F" }
+current = { fg = "#100F0F", bg = "#205EA6" }
+preview = { fg = "#100F0F", bg = "#100F0F" }
+
+[status]
+sep_left = { open = "", close = "" }
+sep_right = { open = "", close = "" }
+progress_label = { fg = "#100F0F", bold = true }
+progress_normal = { fg = "#879A39", bg = "#DAD8CE" }
+progress_error = { fg = "#D0A215", bg = "#D14D41" }
+perm_type = { fg = "#205EA6" }
+perm_read = { fg = "#D0A215" }
+perm_write = { fg = "#D14D41" }
+perm_exec = { fg = "#879A39" }
+perm_sep = { fg = "#100F0F" }
+
+[input]
+border = { fg = "#205EA6" }
+title = { fg = "#100F0F" }
+value = { fg = "#100F0F" }
+selected = { fg = "#100F0F", bg = "#CECDC3" }
+
+[pick]
+border = { fg = "#205EA6" }
+active = { fg = "#CE5D97", bold = true }
+inactive = { fg = "#100F0F" }
+
+[confirm]
+border = { fg = "#205EA6" }
+title = { fg = "#205EA6" }
+body = { fg = "#100F0F" }
+btn_yes = { fg = "#100F0F", bg = "#879A39" }
+btn_no = { fg = "#100F0F", bg = "#D14D41" }
+
+[cmp]
+border = { fg = "#205EA6" }
+
+[tasks]
+border = { fg = "#205EA6" }
+title = { fg = "#100F0F" }
+hovered = { fg = "#CE5D97", bold = true }
+
+[which]
+mask = { bg = "#DAD8CE" }
+cand = { fg = "#3AA99F" }
+rest = { fg = "#100F0F" }
+desc = { fg = "#CE5D97" }
+separator = "    "
+separator_style = { fg = "#100F0F" }
+
+[help]
+on = { fg = "#3AA99F" }
+run = { fg = "#CE5D97" }
+desc = { fg = "#100F0F" }
+hovered = { fg = "#100F0F", bg = "#DAD8CE", bold = true }
+footer = { fg = "#100F0F", bg = "#DAD8CE" }
+
+[notify]
+title_info = { fg = "#3AA99F" }
+title_warn = { fg = "#D0A215" }
+title_error = { fg = "#D14D41" }
+
+[spot]
+border = { fg = "#205EA6" }
+title = { fg = "#205EA6" }
+tbl_cell = { fg = "#100F0F", bg = "#CECDC3" }
+tbl_col = { fg = "#100F0F", bold = true }
+
+[filetype]
+rules = [
+	{ mime = "image/*", fg = "#D0A215" },
+	{ mime = "{audio,video}/*", fg = "#CE5D97" },
+	{ mime = "application/{zip,rar,7z*,tar,gzip,xz,zstd,bzip*,lzma,compress,archive,cpio}", fg = "#D14D41" },
+	{ mime = "application/{pdf,doc,rtf}", fg = "#3AA99F" },
+	{ url = "*", is = "orphan", fg = "#D14D41" },
+	{ url = "*", is = "exec", fg = "#879A39" },
+	{ url = "*/", fg = "#205EA6" },
+]

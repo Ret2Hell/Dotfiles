@@ -1,0 +1,9 @@
+# Installed by `ya pkg install`; package.toml is the source of truth.
+/plugins/
+
+# Runtime-selected by the Omarchy theme hook.
+/theme.toml
+
+# Local generated backups.
+/omarchy-themes/backups/
+*.bak.*

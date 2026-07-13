@@ -1,0 +1,196 @@
+#!/bin/bash
+# Synchronize Yazi with the active Omarchy theme while preserving per-theme profiles.
+set -euo pipefail
+
+readonly OMARCHY_DIR="$HOME/.config/omarchy"
+readonly THEME_NAME_FILE="$OMARCHY_DIR/current/theme.name"
+readonly CURRENT_THEME_DIR="$OMARCHY_DIR/current/theme"
+readonly USER_THEMES_DIR="$OMARCHY_DIR/themes"
+readonly OMARCHY_THEMES_DIR="$HOME/.local/share/omarchy/themes"
+readonly PERSISTENT_THEMES_DIR="$HOME/.config/yazi/omarchy-themes"
+readonly CURRENT_THEME_LINK="$HOME/.config/yazi/theme.toml"
+
+detect_theme() {
+	if [[ -f "$THEME_NAME_FILE" ]]; then
+		tr -d '[:space:]' < "$THEME_NAME_FILE"
+	else
+		printf '%s\n' "tokyo-night"
+	fi
+}
+
+find_colors() {
+	local theme_name="$1"
+	local current_name
+	current_name=$(detect_theme)
+
+	if [[ "$theme_name" == "$current_name" && -f "$CURRENT_THEME_DIR/colors.toml" ]]; then
+		printf '%s\n' "$CURRENT_THEME_DIR/colors.toml"
+	elif [[ -f "$USER_THEMES_DIR/$theme_name/colors.toml" ]]; then
+		printf '%s\n' "$USER_THEMES_DIR/$theme_name/colors.toml"
+	elif [[ -f "$OMARCHY_THEMES_DIR/$theme_name/colors.toml" ]]; then
+		printf '%s\n' "$OMARCHY_THEMES_DIR/$theme_name/colors.toml"
+	fi
+}
+
+color_value() {
+	local file="$1" key="$2" fallback="$3" value
+	value=$(awk -F ' *= *' -v key="$key" '$1 == key { gsub(/["[:space:]]/, "", $2); print $2; exit }' "$file")
+	printf '%s\n' "${value:-$fallback}"
+}
+
+generate_dynamic_theme() {
+	local theme_name="$1" output="$2" colors_file="$3"
+	local accent foreground background selection_fg selection_bg
+	local red green yellow blue magenta cyan muted surface
+
+	accent=$(color_value "$colors_file" accent "#7aa2f7")
+	foreground=$(color_value "$colors_file" foreground "#c0caf5")
+	background=$(color_value "$colors_file" background "#1a1b26")
+	selection_fg=$(color_value "$colors_file" selection_foreground "$background")
+	selection_bg=$(color_value "$colors_file" selection_background "$accent")
+	red=$(color_value "$colors_file" color1 "#f7768e")
+	green=$(color_value "$colors_file" color2 "#9ece6a")
+	yellow=$(color_value "$colors_file" color3 "#e0af68")
+	blue=$(color_value "$colors_file" color4 "$accent")
+	magenta=$(color_value "$colors_file" color5 "#bb9af7")
+	cyan=$(color_value "$colors_file" color6 "#7dcfff")
+	surface=$(color_value "$colors_file" color0 "#32344a")
+	muted=$(color_value "$colors_file" color8 "#565f89")
+
+	cat > "$output" <<EOF
+# Generated from Omarchy's $theme_name colors.
+# This is a persistent profile: edit it if you want per-theme customizations.
+
+[app]
+overall = { bg = "$background" }
+
+[mgr]
+cwd = { fg = "$cyan" }
+find_keyword = { fg = "$yellow", bold = true }
+find_position = { fg = "$magenta", italic = true }
+marker_copied = { fg = "$green", bg = "$green" }
+marker_cut = { fg = "$red", bg = "$red" }
+marker_marked = { fg = "$cyan", bg = "$cyan" }
+marker_selected = { fg = "$blue", bg = "$blue" }
+count_copied = { fg = "$selection_fg", bg = "$green" }
+count_cut = { fg = "$selection_fg", bg = "$red" }
+count_selected = { fg = "$selection_fg", bg = "$blue" }
+border_symbol = "│"
+border_style = { fg = "$muted" }
+
+[tabs]
+active = { fg = "$selection_fg", bg = "$selection_bg", bold = true }
+inactive = { fg = "$foreground", bg = "$surface" }
+
+[mode]
+normal_main = { fg = "$selection_fg", bg = "$accent", bold = true }
+normal_alt = { fg = "$accent", bg = "$surface" }
+select_main = { fg = "$selection_fg", bg = "$green", bold = true }
+select_alt = { fg = "$green", bg = "$surface" }
+unset_main = { fg = "$selection_fg", bg = "$red", bold = true }
+unset_alt = { fg = "$red", bg = "$surface" }
+
+[indicator]
+parent = { fg = "$selection_fg", bg = "$foreground" }
+current = { fg = "$selection_fg", bg = "$accent" }
+preview = { fg = "$selection_fg", bg = "$foreground" }
+
+[status]
+sep_left = { open = "", close = "" }
+sep_right = { open = "", close = "" }
+progress_label = { fg = "$foreground", bold = true }
+progress_normal = { fg = "$green", bg = "$surface" }
+progress_error = { fg = "$yellow", bg = "$red" }
+perm_type = { fg = "$blue" }
+perm_read = { fg = "$yellow" }
+perm_write = { fg = "$red" }
+perm_exec = { fg = "$green" }
+perm_sep = { fg = "$muted" }
+
+[input]
+border = { fg = "$accent" }
+title = { fg = "$foreground" }
+value = { fg = "$foreground" }
+selected = { fg = "$selection_fg", bg = "$selection_bg" }
+
+[pick]
+border = { fg = "$accent" }
+active = { fg = "$magenta", bold = true }
+inactive = { fg = "$foreground" }
+
+[confirm]
+border = { fg = "$accent" }
+title = { fg = "$accent" }
+body = { fg = "$foreground" }
+btn_yes = { fg = "$selection_fg", bg = "$green" }
+btn_no = { fg = "$selection_fg", bg = "$red" }
+
+[cmp]
+border = { fg = "$accent" }
+
+[tasks]
+border = { fg = "$accent" }
+title = { fg = "$foreground" }
+hovered = { fg = "$magenta", bold = true }
+
+[which]
+mask = { bg = "$surface" }
+cand = { fg = "$cyan" }
+rest = { fg = "$muted" }
+desc = { fg = "$magenta" }
+separator = "    "
+separator_style = { fg = "$muted" }
+
+[help]
+on = { fg = "$cyan" }
+run = { fg = "$magenta" }
+desc = { fg = "$muted" }
+hovered = { fg = "$foreground", bg = "$surface", bold = true }
+footer = { fg = "$foreground", bg = "$surface" }
+
+[notify]
+title_info = { fg = "$cyan" }
+title_warn = { fg = "$yellow" }
+title_error = { fg = "$red" }
+
+[spot]
+border = { fg = "$accent" }
+title = { fg = "$accent" }
+tbl_cell = { fg = "$selection_fg", bg = "$selection_bg" }
+tbl_col = { fg = "$foreground", bold = true }
+
+[filetype]
+rules = [
+	{ mime = "image/*", fg = "$yellow" },
+	{ mime = "{audio,video}/*", fg = "$magenta" },
+	{ mime = "application/{zip,rar,7z*,tar,gzip,xz,zstd,bzip*,lzma,compress,archive,cpio}", fg = "$red" },
+	{ mime = "application/{pdf,doc,rtf}", fg = "$cyan" },
+	{ url = "*", is = "orphan", fg = "$red" },
+	{ url = "*", is = "exec", fg = "$green" },
+	{ url = "*/", fg = "$blue" },
+]
+EOF
+}
+
+main() {
+	local theme_name="${1:-$(detect_theme)}"
+	local theme_file="$PERSISTENT_THEMES_DIR/$theme_name.toml"
+	local colors_file
+
+	mkdir -p "$PERSISTENT_THEMES_DIR"
+
+	if [[ ! -f "$theme_file" ]]; then
+		colors_file=$(find_colors "$theme_name")
+		if [[ -z "$colors_file" ]]; then
+			echo "No Omarchy colors found for '$theme_name'" >&2
+			exit 1
+		fi
+		generate_dynamic_theme "$theme_name" "$theme_file" "$colors_file"
+	fi
+
+	if [[ "$theme_name" == "$(detect_theme)" ]]; then
+		ln -sfn "$theme_file" "$CURRENT_THEME_LINK"
+	fi
+}
+
+main "$@"

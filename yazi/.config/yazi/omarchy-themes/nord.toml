@@ -1,0 +1,111 @@
+# Generated from Omarchy's nord colors.
+# This is a persistent profile: edit it if you want per-theme customizations.
+
+[app]
+overall = { bg = "#2e3440" }
+
+[mgr]
+cwd = { fg = "#88c0d0" }
+find_keyword = { fg = "#ebcb8b", bold = true }
+find_position = { fg = "#b48ead", italic = true }
+marker_copied = { fg = "#a3be8c", bg = "#a3be8c" }
+marker_cut = { fg = "#bf616a", bg = "#bf616a" }
+marker_marked = { fg = "#88c0d0", bg = "#88c0d0" }
+marker_selected = { fg = "#81a1c1", bg = "#81a1c1" }
+count_copied = { fg = "#d8dee9", bg = "#a3be8c" }
+count_cut = { fg = "#d8dee9", bg = "#bf616a" }
+count_selected = { fg = "#d8dee9", bg = "#81a1c1" }
+border_symbol = "│"
+border_style = { fg = "#4c566a" }
+
+[tabs]
+active = { fg = "#d8dee9", bg = "#4c566a", bold = true }
+inactive = { fg = "#d8dee9", bg = "#3b4252" }
+
+[mode]
+normal_main = { fg = "#d8dee9", bg = "#81a1c1", bold = true }
+normal_alt = { fg = "#81a1c1", bg = "#3b4252" }
+select_main = { fg = "#d8dee9", bg = "#a3be8c", bold = true }
+select_alt = { fg = "#a3be8c", bg = "#3b4252" }
+unset_main = { fg = "#d8dee9", bg = "#bf616a", bold = true }
+unset_alt = { fg = "#bf616a", bg = "#3b4252" }
+
+[indicator]
+parent = { fg = "#d8dee9", bg = "#d8dee9" }
+current = { fg = "#d8dee9", bg = "#81a1c1" }
+preview = { fg = "#d8dee9", bg = "#d8dee9" }
+
+[status]
+sep_left = { open = "", close = "" }
+sep_right = { open = "", close = "" }
+progress_label = { fg = "#d8dee9", bold = true }
+progress_normal = { fg = "#a3be8c", bg = "#3b4252" }
+progress_error = { fg = "#ebcb8b", bg = "#bf616a" }
+perm_type = { fg = "#81a1c1" }
+perm_read = { fg = "#ebcb8b" }
+perm_write = { fg = "#bf616a" }
+perm_exec = { fg = "#a3be8c" }
+perm_sep = { fg = "#4c566a" }
+
+[input]
+border = { fg = "#81a1c1" }
+title = { fg = "#d8dee9" }
+value = { fg = "#d8dee9" }
+selected = { fg = "#d8dee9", bg = "#4c566a" }
+
+[pick]
+border = { fg = "#81a1c1" }
+active = { fg = "#b48ead", bold = true }
+inactive = { fg = "#d8dee9" }
+
+[confirm]
+border = { fg = "#81a1c1" }
+title = { fg = "#81a1c1" }
+body = { fg = "#d8dee9" }
+btn_yes = { fg = "#d8dee9", bg = "#a3be8c" }
+btn_no = { fg = "#d8dee9", bg = "#bf616a" }
+
+[cmp]
+border = { fg = "#81a1c1" }
+
+[tasks]
+border = { fg = "#81a1c1" }
+title = { fg = "#d8dee9" }
+hovered = { fg = "#b48ead", bold = true }
+
+[which]
+mask = { bg = "#3b4252" }
+cand = { fg = "#88c0d0" }
+rest = { fg = "#4c566a" }
+desc = { fg = "#b48ead" }
+separator = "    "
+separator_style = { fg = "#4c566a" }
+
+[help]
+on = { fg = "#88c0d0" }
+run = { fg = "#b48ead" }
+desc = { fg = "#4c566a" }
+hovered = { fg = "#d8dee9", bg = "#3b4252", bold = true }
+footer = { fg = "#d8dee9", bg = "#3b4252" }
+
+[notify]
+title_info = { fg = "#88c0d0" }
+title_warn = { fg = "#ebcb8b" }
+title_error = { fg = "#bf616a" }
+
+[spot]
+border = { fg = "#81a1c1" }
+title = { fg = "#81a1c1" }
+tbl_cell = { fg = "#d8dee9", bg = "#4c566a" }
+tbl_col = { fg = "#d8dee9", bold = true }
+
+[filetype]
+rules = [
+	{ mime = "image/*", fg = "#ebcb8b" },
+	{ mime = "{audio,video}/*", fg = "#b48ead" },
+	{ mime = "application/{zip,rar,7z*,tar,gzip,xz,zstd,bzip*,lzma,compress,archive,cpio}", fg = "#bf616a" },
+	{ mime = "application/{pdf,doc,rtf}", fg = "#88c0d0" },
+	{ url = "*", is = "orphan", fg = "#bf616a" },
+	{ url = "*", is = "exec", fg = "#a3be8c" },
+	{ url = "*/", fg = "#81a1c1" },
+]

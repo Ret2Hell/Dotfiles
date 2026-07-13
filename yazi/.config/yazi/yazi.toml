@@ -1,0 +1,15 @@
+# Keep this file intentionally small so Yazi's improved defaults continue to
+# apply after upgrades. Only personal overrides belong here.
+
+[mgr]
+sort_by = "natural"
+sort_dir_first = true
+show_hidden = false
+linemode = "size"
+
+[preview]
+wrap = "yes"
+tab_size = 2
+image_delay = 20
+max_width = 1000
+max_height = 1000

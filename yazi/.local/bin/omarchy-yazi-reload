@@ -1,0 +1,19 @@
+#!/bin/bash
+# Omarchy Yazi Reload Script (v2.0.0)
+# Called by Omarchy when theme changes
+set -euo pipefail
+
+readonly GENERATOR="$HOME/.local/bin/omarchy-yazi-generator"
+readonly YAZI_STATE="$HOME/.local/state/yazi"
+
+# Regenerate current theme config
+if [[ -x "$GENERATOR" ]]; then
+  "$GENERATOR" &>/dev/null || true
+fi
+
+# Clear Yazi state cache
+if [[ -d "$YAZI_STATE" ]]; then
+  rm -rf "$YAZI_STATE" &>/dev/null || true
+fi
+
+exit 0
