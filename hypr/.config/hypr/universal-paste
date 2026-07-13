@@ -1,0 +1,14 @@
+#!/bin/bash
+
+modifier=SHIFT
+key=Insert
+
+while IFS= read -r mime_type; do
+  if [[ $mime_type == image/* ]]; then
+    modifier=CTRL
+    key=V
+    break
+  fi
+done < <(wl-paste --list-types 2>/dev/null)
+
+hyprctl dispatch sendshortcut "$modifier, $key, activewindow"
