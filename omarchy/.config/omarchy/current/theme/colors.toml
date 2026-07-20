@@ -1,23 +1,33 @@
-accent = "#89b4fa"
-cursor = "#f5e0dc"
-foreground = "#cdd6f4"
-background = "#1e1e2e"
-selection_foreground = "#1e1e2e"
-selection_background = "#f5e0dc"
+# Core UI colors
+accent = "#888888"                 # Neutral accent (from color4)
+cursor = "#FFFFFF"                 # Cursor (default white)
+foreground = "#FFFFFF"             # Primary text
+background = "#000000"             # Background
 
-color0 = "#45475a"
-color1 = "#f38ba8"
-color2 = "#a6e3a1"
-color3 = "#f9e2af"
-color4 = "#89b4fa"
-color5 = "#f5c2e7"
-color6 = "#94e2d5"
-color7 = "#bac2de"
-color8 = "#585b70"
-color9 = "#f38ba8"
-color10 = "#a6e3a1"
-color11 = "#f9e2af"
-color12 = "#89b4fa"
-color13 = "#f5c2e7"
-color14 = "#94e2d5"
-color15 = "#a6adc8"
+selection_foreground = "#000000"   # Selected text
+selection_background = "#FFFFFF"   # Selection background
+
+# --------------------------------------------------
+# Base16-aligned 16-color palette
+# --------------------------------------------------
+
+# base00–base07 (normal)
+color0  = "#000000"  # base00 - Deep background
+color1  = "#5F8787"  # base08 - Error / critical
+color2  = "#DD9999"  # base0B - Success / positive
+color3  = "#A06666"  # base0A - Warning / attention
+color4  = "#888888"  # base0D - Primary accent
+color5  = "#999999"  # base0E - Secondary accent
+color6  = "#AAAAAA"  # base0C - Informational
+color7  = "#C1C1C1"  # base05 - Default foreground
+
+# base08–base0F (bright)
+color8  = "#333333"  # base03 - Dim / inactive
+color9  = "#5F8787"  # base08 - Bright error
+color10 = "#DD9999"  # base0B - Bright success
+color11 = "#A06666"  # base0A - Bright warning
+color12 = "#888888"  # base0D - Bright accent
+color13 = "#999999"  # base0E - Bright secondary
+color14 = "#AAAAAA"  # base0C - Bright info
+color15 = "#C1C1C1"  # base07 - High-contrast text
+

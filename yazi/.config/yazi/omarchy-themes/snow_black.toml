@@ -1,0 +1,111 @@
+# Generated from Omarchy's snow_black colors.
+# This is a persistent profile: edit it if you want per-theme customizations.
+
+[app]
+overall = { bg = "#000000" } # Background
+
+[mgr]
+cwd = { fg = "#AAAAAA" }
+find_keyword = { fg = "#A06666", bold = true }
+find_position = { fg = "#999999", italic = true }
+marker_copied = { fg = "#DD9999", bg = "#DD9999" }
+marker_cut = { fg = "#5F8787", bg = "#5F8787" }
+marker_marked = { fg = "#AAAAAA", bg = "#AAAAAA" }
+marker_selected = { fg = "#888888", bg = "#888888" }
+count_copied = { fg = "#000000", bg = "#DD9999" }
+count_cut = { fg = "#000000", bg = "#5F8787" }
+count_selected = { fg = "#000000", bg = "#888888" }
+border_symbol = "│"
+border_style = { fg = "#333333" }
+
+[tabs]
+active = { fg = "#000000", bg = "#FFFFFF", bold = true }
+inactive = { fg = "#FFFFFF", bg = "#000000" }
+
+[mode]
+normal_main = { fg = "#000000", bg = "#888888", bold = true }
+normal_alt = { fg = "#888888", bg = "#000000" }
+select_main = { fg = "#000000", bg = "#DD9999", bold = true }
+select_alt = { fg = "#DD9999", bg = "#000000" }
+unset_main = { fg = "#000000", bg = "#5F8787", bold = true }
+unset_alt = { fg = "#5F8787", bg = "#000000" }
+
+[indicator]
+parent = { fg = "#000000", bg = "#FFFFFF" }
+current = { fg = "#000000", bg = "#888888" }
+preview = { fg = "#000000", bg = "#FFFFFF" }
+
+[status]
+sep_left = { open = "", close = "" }
+sep_right = { open = "", close = "" }
+progress_label = { fg = "#FFFFFF", bold = true }
+progress_normal = { fg = "#DD9999", bg = "#000000" }
+progress_error = { fg = "#A06666", bg = "#5F8787" }
+perm_type = { fg = "#888888" }
+perm_read = { fg = "#A06666" }
+perm_write = { fg = "#5F8787" }
+perm_exec = { fg = "#DD9999" }
+perm_sep = { fg = "#333333" }
+
+[input]
+border = { fg = "#888888" }
+title = { fg = "#FFFFFF" }
+value = { fg = "#FFFFFF" }
+selected = { fg = "#000000", bg = "#FFFFFF" }
+
+[pick]
+border = { fg = "#888888" }
+active = { fg = "#999999", bold = true }
+inactive = { fg = "#FFFFFF" }
+
+[confirm]
+border = { fg = "#888888" }
+title = { fg = "#888888" }
+body = { fg = "#FFFFFF" }
+btn_yes = { fg = "#000000", bg = "#DD9999" }
+btn_no = { fg = "#000000", bg = "#5F8787" }
+
+[cmp]
+border = { fg = "#888888" }
+
+[tasks]
+border = { fg = "#888888" }
+title = { fg = "#FFFFFF" }
+hovered = { fg = "#999999", bold = true }
+
+[which]
+mask = { bg = "#000000" }
+cand = { fg = "#AAAAAA" }
+rest = { fg = "#333333" }
+desc = { fg = "#999999" }
+separator = "    "
+separator_style = { fg = "#333333" }
+
+[help]
+on = { fg = "#AAAAAA" }
+run = { fg = "#999999" }
+desc = { fg = "#333333" }
+hovered = { fg = "#FFFFFF", bg = "#000000", bold = true }
+footer = { fg = "#FFFFFF", bg = "#000000" }
+
+[notify]
+title_info = { fg = "#AAAAAA" }
+title_warn = { fg = "#A06666" }
+title_error = { fg = "#5F8787" }
+
+[spot]
+border = { fg = "#888888" }
+title = { fg = "#888888" }
+tbl_cell = { fg = "#000000", bg = "#FFFFFF" }
+tbl_col = { fg = "#FFFFFF", bold = true }
+
+[filetype]
+rules = [
+	{ mime = "image/*", fg = "#A06666" },
+	{ mime = "{audio,video}/*", fg = "#999999" },
+	{ mime = "application/{zip,rar,7z*,tar,gzip,xz,zstd,bzip*,lzma,compress,archive,cpio}", fg = "#5F8787" },
+	{ mime = "application/{pdf,doc,rtf}", fg = "#AAAAAA" },
+	{ url = "*", is = "orphan", fg = "#5F8787" },
+	{ url = "*", is = "exec", fg = "#DD9999" },
+	{ url = "*/", fg = "#888888" },
+]

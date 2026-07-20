@@ -1,0 +1,111 @@
+# Generated from Omarchy's catppu_mocha colors.
+# This is a persistent profile: edit it if you want per-theme customizations.
+
+[app]
+overall = { bg = "#11111B" }
+
+[mgr]
+cwd = { fg = "#94E2D5#cyan" }
+find_keyword = { fg = "#F9E2AF#yellow", bold = true }
+find_position = { fg = "#F5C2E7#magenta", italic = true }
+marker_copied = { fg = "#A6E3A1#green", bg = "#A6E3A1#green" }
+marker_cut = { fg = "#F38BA8#red", bg = "#F38BA8#red" }
+marker_marked = { fg = "#94E2D5#cyan", bg = "#94E2D5#cyan" }
+marker_selected = { fg = "#89B4FA#blue", bg = "#89B4FA#blue" }
+count_copied = { fg = "#1E1E2E", bg = "#A6E3A1#green" }
+count_cut = { fg = "#1E1E2E", bg = "#F38BA8#red" }
+count_selected = { fg = "#1E1E2E", bg = "#89B4FA#blue" }
+border_symbol = "│"
+border_style = { fg = "#585B70#brightblack" }
+
+[tabs]
+active = { fg = "#1E1E2E", bg = "#F5E0DC", bold = true }
+inactive = { fg = "#CDD6F4", bg = "#45475A#black" }
+
+[mode]
+normal_main = { fg = "#1E1E2E", bg = "#F5C2E7", bold = true }
+normal_alt = { fg = "#F5C2E7", bg = "#45475A#black" }
+select_main = { fg = "#1E1E2E", bg = "#A6E3A1#green", bold = true }
+select_alt = { fg = "#A6E3A1#green", bg = "#45475A#black" }
+unset_main = { fg = "#1E1E2E", bg = "#F38BA8#red", bold = true }
+unset_alt = { fg = "#F38BA8#red", bg = "#45475A#black" }
+
+[indicator]
+parent = { fg = "#1E1E2E", bg = "#CDD6F4" }
+current = { fg = "#1E1E2E", bg = "#F5C2E7" }
+preview = { fg = "#1E1E2E", bg = "#CDD6F4" }
+
+[status]
+sep_left = { open = "", close = "" }
+sep_right = { open = "", close = "" }
+progress_label = { fg = "#CDD6F4", bold = true }
+progress_normal = { fg = "#A6E3A1#green", bg = "#45475A#black" }
+progress_error = { fg = "#F9E2AF#yellow", bg = "#F38BA8#red" }
+perm_type = { fg = "#89B4FA#blue" }
+perm_read = { fg = "#F9E2AF#yellow" }
+perm_write = { fg = "#F38BA8#red" }
+perm_exec = { fg = "#A6E3A1#green" }
+perm_sep = { fg = "#585B70#brightblack" }
+
+[input]
+border = { fg = "#F5C2E7" }
+title = { fg = "#CDD6F4" }
+value = { fg = "#CDD6F4" }
+selected = { fg = "#1E1E2E", bg = "#F5E0DC" }
+
+[pick]
+border = { fg = "#F5C2E7" }
+active = { fg = "#F5C2E7#magenta", bold = true }
+inactive = { fg = "#CDD6F4" }
+
+[confirm]
+border = { fg = "#F5C2E7" }
+title = { fg = "#F5C2E7" }
+body = { fg = "#CDD6F4" }
+btn_yes = { fg = "#1E1E2E", bg = "#A6E3A1#green" }
+btn_no = { fg = "#1E1E2E", bg = "#F38BA8#red" }
+
+[cmp]
+border = { fg = "#F5C2E7" }
+
+[tasks]
+border = { fg = "#F5C2E7" }
+title = { fg = "#CDD6F4" }
+hovered = { fg = "#F5C2E7#magenta", bold = true }
+
+[which]
+mask = { bg = "#45475A#black" }
+cand = { fg = "#94E2D5#cyan" }
+rest = { fg = "#585B70#brightblack" }
+desc = { fg = "#F5C2E7#magenta" }
+separator = "    "
+separator_style = { fg = "#585B70#brightblack" }
+
+[help]
+on = { fg = "#94E2D5#cyan" }
+run = { fg = "#F5C2E7#magenta" }
+desc = { fg = "#585B70#brightblack" }
+hovered = { fg = "#CDD6F4", bg = "#45475A#black", bold = true }
+footer = { fg = "#CDD6F4", bg = "#45475A#black" }
+
+[notify]
+title_info = { fg = "#94E2D5#cyan" }
+title_warn = { fg = "#F9E2AF#yellow" }
+title_error = { fg = "#F38BA8#red" }
+
+[spot]
+border = { fg = "#F5C2E7" }
+title = { fg = "#F5C2E7" }
+tbl_cell = { fg = "#1E1E2E", bg = "#F5E0DC" }
+tbl_col = { fg = "#CDD6F4", bold = true }
+
+[filetype]
+rules = [
+	{ mime = "image/*", fg = "#F9E2AF#yellow" },
+	{ mime = "{audio,video}/*", fg = "#F5C2E7#magenta" },
+	{ mime = "application/{zip,rar,7z*,tar,gzip,xz,zstd,bzip*,lzma,compress,archive,cpio}", fg = "#F38BA8#red" },
+	{ mime = "application/{pdf,doc,rtf}", fg = "#94E2D5#cyan" },
+	{ url = "*", is = "orphan", fg = "#F38BA8#red" },
+	{ url = "*", is = "exec", fg = "#A6E3A1#green" },
+	{ url = "*/", fg = "#89B4FA#blue" },
+]
