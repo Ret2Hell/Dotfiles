@@ -61,3 +61,11 @@ pane_history = false
 
 [advanced]
 scrollback_limit_bytes = 50000000
+
+[[keys.command]]
+key = "prefix+j"
+type = "popup"
+command = "jiratui"
+description = "run jiratui"
+width = "80%"
+height = "80%"
