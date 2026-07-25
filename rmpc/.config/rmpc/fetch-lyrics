@@ -1,0 +1,47 @@
+#!/bin/sh
+
+LRCLIB_INSTANCE="https://lrclib.net"
+
+[ "$HAS_LRC" = "false" ] || exit 0
+
+if [ -z "$ARTIST" ] || [ -z "$TITLE" ] || [ -z "$LRC_FILE" ]; then
+    rmpc remote --pid "$PID" status "Cannot fetch lyrics: artist or title is missing" --level warn
+    exit 0
+fi
+
+response=$(curl --fail --silent --show-error --get \
+    --header "Lrclib-Client: rmpc-$VERSION" \
+    --data-urlencode "artist_name=$ARTIST" \
+    --data-urlencode "track_name=$TITLE" \
+    --data-urlencode "album_name=$ALBUM" \
+    "$LRCLIB_INSTANCE/api/get") || {
+    rmpc remote --pid "$PID" status "Failed to query lyrics for $ARTIST - $TITLE" --level error
+    exit 0
+}
+
+lyrics=$(printf '%s' "$response" | jq -r '.syncedLyrics // empty') || {
+    rmpc remote --pid "$PID" status "Invalid lyrics response for $ARTIST - $TITLE" --level error
+    exit 0
+}
+
+if [ -z "$lyrics" ]; then
+    rmpc remote --pid "$PID" status "Synced lyrics for $ARTIST - $TITLE not found" --level warn
+    exit 0
+fi
+
+mkdir -p "$(dirname "$LRC_FILE")" || exit 1
+tmp_file="$LRC_FILE.tmp.$$"
+trap 'rm -f "$tmp_file"' EXIT HUP INT TERM
+
+{
+    printf '[ar:%s]\n' "$ARTIST"
+    printf '[al:%s]\n' "$ALBUM"
+    printf '[ti:%s]\n' "$TITLE"
+    printf '%s\n' "$lyrics" | sed -E '/^\[(ar|al|ti):/d'
+} >"$tmp_file" || exit 1
+
+mv "$tmp_file" "$LRC_FILE" || exit 1
+trap - EXIT HUP INT TERM
+
+rmpc remote --pid "$PID" indexlrc --path "$LRC_FILE"
+rmpc remote --pid "$PID" status "Downloaded lyrics for $ARTIST - $TITLE" --level info

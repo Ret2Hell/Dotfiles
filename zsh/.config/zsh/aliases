@@ -8,4 +8,7 @@ alias cat='bat'
 alias ipi='tdl pi'
 
 # jiratui
-alias j="jiratui"
+alias j='jiratui'
+
+# rmpc
+alias m='rmpc'
