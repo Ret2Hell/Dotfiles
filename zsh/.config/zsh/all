@@ -1,6 +1,4 @@
-# If not running interactively, don't do anything
-[[ $- != *i* ]] && return
-
+# Load personal shell configuration (aliases, functions, environment, tool init)
 source "$HOME/.config/zsh/envs"
 source "$HOME/.config/zsh/aliases"
 source "$HOME/.config/zsh/functions"

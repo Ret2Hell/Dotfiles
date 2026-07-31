@@ -4,8 +4,20 @@ alias copy='wl-copy'
 # Bat
 alias cat='bat'
 
-# pi
-alias ipi='tdl pi'
+# File system
+alias ls='eza -lh --group-directories-first --icons=auto'
+alias lsa='ls -a'
+alias lta='eza --tree --level=2 --long --icons --git -a'
 
-# rmpc
-alias m='rmpc'
+# zoxide
+alias cd="zd"
+
+# Tools
+alias c='opencode'
+alias d='docker'
+
+# Compression
+alias decompress="tar -xzf"
+
+# mise
+alias mr='mise run'

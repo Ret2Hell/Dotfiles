@@ -1,0 +1,4 @@
+# Zsh runtime state (history, compdump) must not be tracked
+zsh/.config/zsh/.zsh_history
+zsh/.config/zsh/.zcompdump*
+zsh/.config/zsh/*.zwc
