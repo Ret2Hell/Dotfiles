@@ -65,12 +65,7 @@ zle -N z4h-copy-buffer
 # Define key bindings.
 z4h bindkey z4h-backward-kill-word  Ctrl+Backspace     Ctrl+H
 z4h bindkey z4h-backward-kill-zword Ctrl+Alt+Backspace
-z4h bindkey z4h-copy-buffer Alt+C
-
-z4h bindkey z4h-cd-back    Alt+Left   # cd into the previous directory
-z4h bindkey z4h-cd-forward Alt+Right  # cd into the next directory
-z4h bindkey z4h-cd-up      Alt+Up     # cd into the parent directory
-z4h bindkey z4h-cd-down    Alt+Down   # cd into a child directory
+z4h bindkey z4h-copy-buffer Ctrl+O
 
 # Autoload functions.
 autoload -Uz zmv
