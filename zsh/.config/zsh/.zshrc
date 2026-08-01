@@ -22,6 +22,9 @@ zstyle ':z4h:' term-shell-integration 'yes'
 # Right-arrow key accepts one character ('partial-accept') from
 # command autosuggestions or the whole thing ('accept')?
 zstyle ':z4h:autosuggestions' forward-char 'accept'
+# End-of-line accepts the suggestion one line at a time ('partial-accept')
+# instead of the whole thing at once.
+zstyle ':z4h:autosuggestions' end-of-line  partial-accept
 
 # Recursively traverse directories when TAB-completing files.
 zstyle ':z4h:fzf-complete' recurse-dirs 'yes'
@@ -29,6 +32,8 @@ zstyle ':z4h:fzf-complete' recurse-dirs 'yes'
 zstyle ':z4h:fzf-complete'    fzf-bindings tab:repeat
 zstyle ':z4h:cd-down'         fzf-bindings tab:repeat
 zstyle ':z4h:fzf-dir-history' fzf-bindings tab:repeat
+# Highlight fzf matches in blue instead of the default pink.
+zstyle ':z4h:*' fzf-flags --color=hl:5,hl+:5
 
 # Install or update core components (fzf, zsh-autosuggestions, etc.) and
 # initialize Zsh. After this point console I/O is unavailable until Zsh
@@ -59,7 +64,7 @@ autoload -Uz zmv
 
 # Set shell options: http://zsh.sourceforge.net/Doc/Release/Options.html.
 setopt glob_dots     # no special treatment for file names with a leading dot
-setopt no_auto_menu  # require an extra TAB press to open the completion menu
+setopt auto_menu     # press TAB for the second time when the first TAB inserts an unambiguous prefix
 
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
