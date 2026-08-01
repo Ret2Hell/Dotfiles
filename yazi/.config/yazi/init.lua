@@ -33,3 +33,5 @@ require("copy-file-contents"):setup({
 require("full-border"):setup({
 	type = ui.Border.PLAIN,
 })
+
+require("recycle-bin"):setup()

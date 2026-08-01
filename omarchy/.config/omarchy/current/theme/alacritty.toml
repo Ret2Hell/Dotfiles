@@ -1,56 +1,47 @@
-[window]
-# window padding {px}
-padding.x = 16
-padding.y = 16
-
-[font]
-size = 12.0
-
-[colors.normal]
-black = "#000000"
-red = "#FEFEFE"
-green = "#BDBDBD"
-yellow = "#CFCFCF"
-blue = "#BDBDBD"
-magenta = "#BDBDBD"
-cyan = "#BDBDBD"
-white = "#FEFEFE"
-
-# [colors.normal]
-# black = "#2c2525"
-# red = "#fd6883"
-# green = "#adda78"
-# yellow = "#f9cc6c"
-# blue = "#f38d70"
-# magenta = "#a8a9eb"
-# cyan = "#85dacc"
-# white = "#e6d9db"
-
-[colors.bright]
-black = "#1A1A1A"
-red = "#F5F5F5"
-green = "#BDBDBD"
-yellow = "#CFCFCF"
-blue = "#BDBDBD"
-magenta = "#BDBDBD"
-cyan = "#BDBDBD"
-white = "#F5F5F5"
+[colors.primary]
+background = "#111c18"
+foreground = "#C1C497"
 
 [colors.cursor]
-cursor = '#FEFEFE'
-text = '#000000'
+text = "#111c18"
+cursor = "#D7C995"
 
-[cursor.style]
-shape = "Underline"
+[colors.vi_mode_cursor]
+text = "#111c18"
+cursor = "#D7C995"
 
-[colors.primary]
-# background = '#2c2525'
-# foreground = '#e6d9db'
-# hard contrast background = = '#1d2021'
-background = '#000000'
-# soft contrast background = = '#32302f'
-foreground = '#FEFEFE' # '#eibdbb2'
+[colors.search.matches]
+foreground = "#111c18"
+background = "#459451"
+
+[colors.search.focused_match]
+foreground = "#111c18"
+background = "#FF5345"
+
+[colors.footer_bar]
+foreground = "#111c18"
+background = "#C1C497"
 
 [colors.selection]
-background = '#2B2B2B' # stronger selection background for visibility when using keyboard
-text = '#FEFEFE'
+text = "#111C18"
+background = "#C1C497"
+
+[colors.normal]
+black = "#23372B"
+red = "#FF5345"
+green = "#549e6a"
+yellow = "#459451"
+blue = "#509475"
+magenta = "#D2689C"
+cyan = "#2DD5B7"
+white = "#F6F5DD"
+
+[colors.bright]
+black = "#53685B"
+red = "#db9f9c"
+green = "#63b07a"
+yellow = "#E5C736"
+blue = "#ACD4CF"
+magenta = "#75bbb3"
+cyan = "#8CD3CB"
+white = "#9eebb3"
