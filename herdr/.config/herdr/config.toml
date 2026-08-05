@@ -44,6 +44,7 @@ mouse_capture = true
 prompt_new_tab_name = false
 show_agent_labels_on_pane_borders = true
 accent = "blue"
+pane_scrollbars = false
 
 agent_panel_sort = "spaces"
 [ui.toast]
