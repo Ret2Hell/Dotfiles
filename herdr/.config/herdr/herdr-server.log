@@ -1,0 +1,125 @@
+2026-08-06T14:29:33.339002Z  INFO herdr::api::server: api server listening path=/home/ret2hell/.config/herdr/herdr.sock
+2026-08-06T14:29:33.340764Z  INFO herdr::app: using pane scrollback configuration pane_scrollback_limit_bytes=50000000
+2026-08-06T14:29:33.396549Z  INFO herdr::logging: checking for updates event="update.check.start" subsystem="update" outcome="started"
+2026-08-06T14:29:33.399723Z  INFO herdr::logging: spawning pane terminal event="pane.spawn.start" subsystem="pane" outcome="started" pane_id=1 rows=24 cols=80 scrollback_limit_bytes=50000000
+2026-08-06T14:29:33.401728Z  INFO herdr::logging: pane child spawned event="pane.spawned" subsystem="pane" outcome="ok" pane_id=1 pid=2077
+2026-08-06T14:29:33.401994Z  INFO herdr::logging: workspace created event="workspace.create" subsystem="workspace" outcome="ok" workspace_id="w1" pane_id=1
+2026-08-06T14:29:33.402004Z  INFO herdr::logging: workspace focused event="workspace.focus" subsystem="workspace" outcome="ok" workspace_id="w1"
+2026-08-06T14:29:33.402031Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w1" tab_id="w1:t1"
+2026-08-06T14:29:33.402043Z  INFO herdr::server::headless: created startup workspace cwd=/home/ret2hell
+2026-08-06T14:29:33.402182Z  INFO herdr::server::headless: client protocol socket listening path=/home/ret2hell/.config/herdr/herdr-client.sock
+2026-08-06T14:29:33.402228Z  INFO herdr::server::headless: herdr server started api_socket=/home/ret2hell/.config/herdr/herdr.sock client_socket=/home/ret2hell/.config/herdr/herdr-client.sock
+2026-08-06T14:29:33.402530Z  INFO herdr::logging: herdr starting event="app.startup" subsystem="server" outcome="started" pid=2049
+2026-08-06T14:29:33.585180Z  INFO herdr::server::headless: client connected client_id=2 cols=236 rows=58 cell_width_px=0 cell_height_px=0 render_encoding=SemanticFrame
+2026-08-06T14:29:38.405489Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/home/ret2hell/.config/herdr/session.json workspaces=1
+2026-08-06T14:29:54.741383Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/home/ret2hell/.config/herdr/session.json workspaces=1
+2026-08-06T14:33:16.683695Z  INFO herdr::logging: spawning pane terminal event="pane.spawn.start" subsystem="pane" outcome="started" pane_id=2 rows=57 cols=210 scrollback_limit_bytes=50000000
+2026-08-06T14:33:16.686834Z  INFO herdr::logging: pane child spawned event="pane.spawned" subsystem="pane" outcome="ok" pane_id=2 pid=5447
+2026-08-06T14:33:16.687277Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w1" tab_id="w1:t2"
+2026-08-06T14:33:21.690605Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/home/ret2hell/.config/herdr/session.json workspaces=1
+2026-08-06T14:34:04.149400Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w1" tab_id="w1:t1"
+2026-08-06T14:34:09.152436Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/home/ret2hell/.config/herdr/session.json workspaces=1
+2026-08-06T14:34:46.961898Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w1" tab_id="w1:t2"
+2026-08-06T14:34:51.965217Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/home/ret2hell/.config/herdr/session.json workspaces=1
+2026-08-06T14:34:53.857485Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w1" tab_id="w1:t1"
+2026-08-06T14:34:55.622149Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w1" tab_id="w1:t2"
+2026-08-06T14:35:00.625114Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/home/ret2hell/.config/herdr/session.json workspaces=1
+2026-08-06T14:35:04.133517Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w1" tab_id="w1:t1"
+2026-08-06T14:35:09.137547Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/home/ret2hell/.config/herdr/session.json workspaces=1
+2026-08-06T14:35:09.502989Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w1" tab_id="w1:t2"
+2026-08-06T14:35:14.504991Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/home/ret2hell/.config/herdr/session.json workspaces=1
+2026-08-06T14:36:36.728654Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w1" tab_id="w1:t1"
+2026-08-06T14:36:39.894429Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w1" tab_id="w1:t2"
+2026-08-06T14:36:44.897423Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/home/ret2hell/.config/herdr/session.json workspaces=1
+2026-08-06T14:36:51.791587Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w1" tab_id="w1:t1"
+2026-08-06T14:36:52.038956Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w1" tab_id="w1:t2"
+2026-08-06T14:36:52.707902Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w1" tab_id="w1:t1"
+2026-08-06T14:36:53.205386Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w1" tab_id="w1:t2"
+2026-08-06T14:36:58.207606Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/home/ret2hell/.config/herdr/session.json workspaces=1
+2026-08-06T14:37:50.557720Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w1" tab_id="w1:t1"
+2026-08-06T14:37:55.561318Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/home/ret2hell/.config/herdr/session.json workspaces=1
+2026-08-06T14:38:23.491516Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w1" tab_id="w1:t2"
+2026-08-06T14:38:24.093607Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w1" tab_id="w1:t1"
+2026-08-06T14:38:29.096016Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/home/ret2hell/.config/herdr/session.json workspaces=1
+2026-08-06T14:39:01.299408Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w1" tab_id="w1:t2"
+2026-08-06T14:39:01.808699Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w1" tab_id="w1:t1"
+2026-08-06T14:39:06.812150Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/home/ret2hell/.config/herdr/session.json workspaces=1
+2026-08-06T14:39:34.563368Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w1" tab_id="w1:t2"
+2026-08-06T14:39:39.566707Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/home/ret2hell/.config/herdr/session.json workspaces=1
+2026-08-06T14:40:54.675687Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w1" tab_id="w1:t1"
+2026-08-06T14:40:59.679447Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/home/ret2hell/.config/herdr/session.json workspaces=1
+2026-08-06T14:41:05.669524Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w1" tab_id="w1:t2"
+2026-08-06T14:41:10.673430Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/home/ret2hell/.config/herdr/session.json workspaces=1
+2026-08-06T14:42:05.658008Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w1" tab_id="w1:t1"
+2026-08-06T14:42:07.061943Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w1" tab_id="w1:t2"
+2026-08-06T14:42:12.067230Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/home/ret2hell/.config/herdr/session.json workspaces=1
+2026-08-06T14:42:50.940941Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w1" tab_id="w1:t1"
+2026-08-06T14:42:55.946157Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/home/ret2hell/.config/herdr/session.json workspaces=1
+2026-08-06T14:42:57.704558Z  INFO herdr::logging: pane child exited event="pane.exit" subsystem="pane" outcome="completed" pane_id=1 status="ExitStatus { code: 1, signal: None }"
+2026-08-06T14:42:57.709238Z  INFO herdr::pane: pane session terminated pane=1 pid=2077 signal=Hangup
+2026-08-06T14:42:57.709871Z  WARN herdr::app::actions: PaneDied for unknown pane pane=1
+2026-08-06T14:43:02.712339Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/home/ret2hell/.config/herdr/session.json workspaces=1
+2026-08-06T14:43:07.399168Z  INFO herdr::logging: spawning pane terminal event="pane.spawn.start" subsystem="pane" outcome="started" pane_id=3 rows=57 cols=210 scrollback_limit_bytes=50000000
+2026-08-06T14:43:07.403159Z  INFO herdr::logging: pane child spawned event="pane.spawned" subsystem="pane" outcome="ok" pane_id=3 pid=11145
+2026-08-06T14:43:07.403702Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w1" tab_id="w1:t3"
+2026-08-06T14:43:08.742940Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w1" tab_id="w1:t2"
+2026-08-06T14:43:13.746265Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/home/ret2hell/.config/herdr/session.json workspaces=1
+2026-08-06T14:43:22.005566Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w1" tab_id="w1:t3"
+2026-08-06T14:43:27.008421Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/home/ret2hell/.config/herdr/session.json workspaces=1
+2026-08-06T14:45:12.932952Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w1" tab_id="w1:t2"
+2026-08-06T14:45:17.938304Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/home/ret2hell/.config/herdr/session.json workspaces=1
+2026-08-06T14:46:18.974190Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w1" tab_id="w1:t3"
+2026-08-06T14:46:23.976837Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/home/ret2hell/.config/herdr/session.json workspaces=1
+2026-08-06T14:47:50.695141Z  INFO herdr::logging: spawning pane terminal event="pane.spawn.start" subsystem="pane" outcome="started" pane_id=4 rows=57 cols=210 scrollback_limit_bytes=50000000
+2026-08-06T14:47:50.698563Z  INFO herdr::logging: pane child spawned event="pane.spawned" subsystem="pane" outcome="ok" pane_id=4 pid=12645
+2026-08-06T14:47:50.699217Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w1" tab_id="w1:t4"
+2026-08-06T14:47:53.090556Z  INFO herdr::logging: pane child exited event="pane.exit" subsystem="pane" outcome="completed" pane_id=4 status="ExitStatus { code: 1, signal: None }"
+2026-08-06T14:47:53.093570Z  INFO herdr::pane: pane session terminated pane=4 pid=12645 signal=Hangup
+2026-08-06T14:47:53.093883Z  WARN herdr::app::actions: PaneDied for unknown pane pane=4
+2026-08-06T14:47:54.135165Z  INFO herdr::logging: pane child exited event="pane.exit" subsystem="pane" outcome="completed" pane_id=3 status="ExitStatus { code: 1, signal: None }"
+2026-08-06T14:47:54.139284Z  INFO herdr::pane: pane session terminated pane=3 pid=11145 signal=Hangup
+2026-08-06T14:47:54.139810Z  WARN herdr::app::actions: PaneDied for unknown pane pane=3
+2026-08-06T14:47:57.312336Z  INFO herdr::logging: spawning pane terminal event="pane.spawn.start" subsystem="pane" outcome="started" pane_id=5 rows=57 cols=210 scrollback_limit_bytes=50000000
+2026-08-06T14:47:57.315241Z  INFO herdr::logging: pane child spawned event="pane.spawned" subsystem="pane" outcome="ok" pane_id=5 pid=12760
+2026-08-06T14:47:57.315531Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w1" tab_id="w1:t5"
+2026-08-06T14:48:03.815484Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/home/ret2hell/.config/herdr/session.json workspaces=1
+2026-08-06T14:48:16.398519Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/home/ret2hell/.config/herdr/session.json workspaces=1
+2026-08-06T14:48:38.339296Z  INFO herdr::logging: spawning pane terminal event="pane.spawn.start" subsystem="pane" outcome="started" pane_id=6 rows=57 cols=210 scrollback_limit_bytes=50000000
+2026-08-06T14:48:38.343042Z  INFO herdr::logging: pane child spawned event="pane.spawned" subsystem="pane" outcome="ok" pane_id=6 pid=13130
+2026-08-06T14:48:38.343565Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w1" tab_id="w1:t6"
+2026-08-06T14:48:46.331884Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/home/ret2hell/.config/herdr/session.json workspaces=1
+2026-08-06T14:49:03.001347Z  INFO herdr::logging: pane child exited event="pane.exit" subsystem="pane" outcome="completed" pane_id=6 status="ExitStatus { code: 1, signal: None }"
+2026-08-06T14:49:03.004071Z  INFO herdr::pane: pane session terminated pane=6 pid=13130 signal=Hangup
+2026-08-06T14:49:03.004392Z  WARN herdr::app::actions: PaneDied for unknown pane pane=6
+2026-08-06T14:49:08.007280Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/home/ret2hell/.config/herdr/session.json workspaces=1
+2026-08-06T14:49:57.762571Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/home/ret2hell/.config/herdr/session.json workspaces=1
+2026-08-06T14:50:58.872882Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w1" tab_id="w1:t2"
+2026-08-06T14:51:03.874303Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/home/ret2hell/.config/herdr/session.json workspaces=1
+2026-08-06T14:51:46.982941Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w1" tab_id="w1:t5"
+2026-08-06T14:51:51.986362Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/home/ret2hell/.config/herdr/session.json workspaces=1
+2026-08-06T14:54:56.186997Z  INFO herdr::logging: pane child exited event="pane.exit" subsystem="pane" outcome="completed" pane_id=5 status="ExitStatus { code: 1, signal: None }"
+2026-08-06T14:54:56.190060Z  INFO herdr::pane: pane session terminated pane=5 pid=12760 signal=Hangup
+2026-08-06T14:54:56.190336Z  WARN herdr::app::actions: PaneDied for unknown pane pane=5
+2026-08-06T14:55:01.191679Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/home/ret2hell/.config/herdr/session.json workspaces=1
+2026-08-06T14:57:01.058460Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w1" tab_id="w1:t2"
+2026-08-06T14:57:06.061411Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/home/ret2hell/.config/herdr/session.json workspaces=1
+2026-08-06T14:57:45.234791Z  INFO herdr::logging: workspace closed event="workspace.close" subsystem="workspace" outcome="ok" workspace_id="w1"
+2026-08-06T14:57:45.237951Z  INFO herdr::logging: pane child exited event="pane.exit" subsystem="pane" outcome="completed" pane_id=2 status="ExitStatus { code: 1, signal: None }"
+2026-08-06T14:57:45.241591Z  INFO herdr::pane: pane session terminated pane=2 pid=5447 signal=Hangup
+2026-08-06T14:57:45.242119Z  WARN herdr::app::actions: PaneDied for unknown pane pane=2
+2026-08-06T14:57:45.242297Z  INFO herdr::logging: spawning pane terminal event="pane.spawn.start" subsystem="pane" outcome="started" pane_id=7 rows=57 cols=210 scrollback_limit_bytes=50000000
+2026-08-06T14:57:45.244625Z  INFO herdr::logging: pane child spawned event="pane.spawned" subsystem="pane" outcome="ok" pane_id=7 pid=21393
+2026-08-06T14:57:45.244881Z  INFO herdr::logging: workspace created event="workspace.create" subsystem="workspace" outcome="ok" workspace_id="w2" pane_id=7
+2026-08-06T14:57:45.244886Z  INFO herdr::logging: workspace focused event="workspace.focus" subsystem="workspace" outcome="ok" workspace_id="w2"
+2026-08-06T14:57:45.244932Z  INFO herdr::logging: tab focused event="tab.focus" subsystem="tab" outcome="ok" workspace_id="w2" tab_id="w2:t1"
+2026-08-06T14:57:47.723772Z  INFO herdr::logging: spawning pane terminal event="pane.spawn.start" subsystem="pane" outcome="started" pane_id=8 rows=43 cols=165 scrollback_limit_bytes=50000000
+2026-08-06T14:57:47.726475Z  INFO herdr::logging: pane child spawned event="pane.spawned" subsystem="pane" outcome="ok" pane_id=8 pid=21498
+2026-08-06T14:57:50.252002Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/home/ret2hell/.config/herdr/session.json workspaces=1
+2026-08-06T14:59:33.398335Z  INFO herdr::logging: checking for updates event="update.check.start" subsystem="update" outcome="started"
+2026-08-06T15:01:45.089451Z  INFO herdr::logging: pane child exited event="pane.exit" subsystem="pane" outcome="completed" pane_id=8 status="ExitStatus { code: 0, signal: None }"
+2026-08-06T15:01:45.089599Z  INFO herdr::pane: pane session terminated pane=8 pid=21498 signal=Hangup
+2026-08-06T15:08:28.337605Z  INFO herdr::logging: spawning pane terminal event="pane.spawn.start" subsystem="pane" outcome="started" pane_id=9 rows=43 cols=165 scrollback_limit_bytes=50000000
+2026-08-06T15:08:28.340855Z  INFO herdr::logging: pane child spawned event="pane.spawned" subsystem="pane" outcome="ok" pane_id=9 pid=29356
+2026-08-06T15:11:53.517561Z  INFO herdr::logging: pane child exited event="pane.exit" subsystem="pane" outcome="completed" pane_id=9 status="ExitStatus { code: 0, signal: None }"
+2026-08-06T15:11:53.517805Z  INFO herdr::pane: pane session terminated pane=9 pid=29356 signal=Hangup
+2026-08-06T15:24:55.764477Z  INFO herdr::logging: session saved event="persist.save" subsystem="persist" outcome="ok" path=/home/ret2hell/.config/herdr/session.json workspaces=1
