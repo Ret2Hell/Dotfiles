@@ -84,6 +84,39 @@ hp() {
   hdl pi "$@"
 }
 
+hg() {
+  emulate -L zsh
+
+  if [[ ${HERDR_ENV:-} != 1 || -z ${HERDR_PANE_ID:-} ]]; then
+    print -u2 -r -- "You must start Herdr with h before using hg."
+    return 1
+  fi
+
+  local current_dir=${PWD}
+  local lazygit_pane=${HERDR_PANE_ID}
+  local current_tab=${HERDR_TAB_ID:-}
+  local label=${current_dir:t}
+  local split_json term_pane
+
+  if [[ -n $current_tab ]]; then
+    command herdr tab rename "$current_tab" "$label" >/dev/null 2>&1 || true
+  fi
+
+  if ! split_json=$(command herdr pane split --pane "$lazygit_pane" --direction right --ratio 0.7 --cwd "$current_dir" 2>&1); then
+    print -u2 -r -- "$split_json"
+    return 1
+  fi
+
+  term_pane=$(print -r -- "$split_json" | __herdr_last_pane_id_from_json)
+  if [[ -z $term_pane ]]; then
+    print -u2 -r -- "Could not determine the new Herdr terminal pane id."
+    print -u2 -r -- "$split_json"
+    return 1
+  fi
+
+  command lazygit "$@"
+}
+
 # yazi
 function y() {
 	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd

@@ -1,7 +1,11 @@
 onboarding = false
-
 [theme]
 name = "terminal"
+
+[theme.custom]
+# The active tab is drawn as panel_bg text on an accent background, so panel_bg
+# has to be dark for it to read - same colors as status-left's "#[fg=black,bg=blue]"
+panel_bg = "black"
 
 [terminal]
 default_shell = "zsh"
@@ -38,6 +42,7 @@ close_pane = "prefix+x"
 zoom = "prefix+z"
 resize_mode = "prefix+shift+z"
 toggle_sidebar = "prefix+b"
+remove_worktree = "prefix+shift+x"
 
 [ui]
 mouse_capture = true
@@ -47,6 +52,10 @@ accent = "blue"
 pane_scrollbars = false
 
 agent_panel_sort = "spaces"
+
+# kill-window and kill-session never asked
+confirm_close = false
+
 [ui.toast]
 delivery = "system"
 delay_seconds = 1

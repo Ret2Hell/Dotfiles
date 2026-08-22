@@ -1,1 +1,1 @@
-/home/ret2hell/.config/omarchy/current/theme/neovim.lua
+/home/ret2hell/.local/state/omarchy/current/theme/neovim.lua

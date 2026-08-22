@@ -1,0 +1,11 @@
+#!/bin/bash
+
+set -euo pipefail
+
+plugin_dir="$HOME/.config/omarchy/plugins/maduki-tech.omado"
+
+if [[ -d "$plugin_dir/.git" ]]; then
+  omarchy plugin update maduki-tech.omado --yes
+else
+  omarchy plugin add https://github.com/maduki-tech/omado.git --enable --yes
+fi

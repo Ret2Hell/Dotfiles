@@ -2,3 +2,11 @@
 zsh/.config/zsh/.zsh_history
 zsh/.config/zsh/.zcompdump*
 zsh/.config/zsh/*.zwc
+
+# Runtime state and generated files
+*.log
+*.bak
+*.bak.*
+herdr/.config/herdr/session.json
+omarchy/.config/omarchy/current/
+**/node_modules/

@@ -1,0 +1,20 @@
+#!/bin/bash
+
+set -euo pipefail
+
+theme_slug=${1:-}
+[[ -n $theme_slug ]] || exit 0
+
+scheme=$theme_slug
+colors="$HOME/.config/spicetify/Themes/Sleek/color.ini"
+
+if [[ ! -f $colors ]] || ! grep -Fqx "[$scheme]" "$colors"; then
+  exit 0
+fi
+
+if [[ $(spicetify config color_scheme) == "$scheme" ]]; then
+  exit 0
+fi
+
+spicetify config color_scheme "$scheme" >/dev/null
+spicetify -q --no-restart apply

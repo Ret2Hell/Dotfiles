@@ -11,10 +11,13 @@ alias lt='eza --tree --level=2 --long --icons --git'
 alias lta='lt -a'
 
 # Tools
-alias c='opencode'
+alias c='opencode --auto'
+alias lg='lazygit'
+alias t='tmux attach || tmux new -s Work'
 
 # Compression
 alias decompress="tar -xzf"
 
 # mise
 alias mr='mise run'
+alias mup='MISE_MINIMUM_RELEASE_AGE=0 mise up'

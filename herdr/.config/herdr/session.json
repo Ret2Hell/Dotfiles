@@ -2,11 +2,11 @@
   "version": 3,
   "workspaces": [
     {
-      "id": "w2",
+      "id": "w1V",
       "custom_name": null,
-      "identity_cwd": "/home/ret2hell/dotfiles",
+      "identity_cwd": "/home/ret2hell",
       "public_pane_numbers": {
-        "7": 1
+        "16": 1
       },
       "next_public_pane_number": 2,
       "public_tab_numbers": [
@@ -17,16 +17,16 @@
         {
           "custom_name": null,
           "layout": {
-            "Pane": 7
+            "Pane": 16
           },
           "panes": {
-            "7": {
-              "cwd": "/home/ret2hell/dotfiles"
+            "16": {
+              "cwd": "/home/ret2hell"
             }
           },
           "zoomed": false,
-          "focused": 7,
-          "root_pane": 7
+          "focused": 16,
+          "root_pane": 16
         }
       ],
       "active_tab": 0
@@ -34,7 +34,7 @@
   ],
   "active": 0,
   "selected": 0,
-  "sidebar_width": 26,
+  "sidebar_width": 27,
   "sidebar_section_split": 0.5,
   "collapsed_space_keys": []
 }

@@ -1,29 +1,34 @@
 {
-  "$schema": "https://opencode.ai/config.json",
-  "provider": {
-    "openai": {
-      "models": {
-        "gpt-5.6-sol": {
-          "options": {
-            "textVerbosity": "low"
-          }
+    "$schema": "https://opencode.ai/config.json",
+    "provider": {
+        "openai": {
+            "models": {
+                "gpt-5.6-sol": {
+                    "options": {
+                        "textVerbosity": "low"
+                    }
+                },
+                "gpt-5.6-luna": {
+                    "options": {
+                        "reasoningEffort": "max",
+                        "textVerbosity": "low"
+                    }
+                }
+            }
         },
-        "gpt-5.6-luna": {
-          "options": {
-            "reasoningEffort": "max",
-            "textVerbosity": "low"
-          }
+        "opencode": {
+            "models": {
+                "deepseek-v4-flash-free": {
+                    "options": {
+                        "reasoningEffort": "max"
+                    }
+                }
+            }
         }
-      }
     },
-    "opencode": {
-      "models": {
-        "deepseek-v4-flash-free": {
-          "options": {
-            "reasoningEffort": "max"
-          }
+    "agent": {
+        "explore": {
+            "model": "opencode/deepseek-v4-flash-free"
         }
-      }
     }
-  }
 }

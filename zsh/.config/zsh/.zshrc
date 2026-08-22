@@ -13,11 +13,11 @@ zstyle ':z4h:' auto-update-days '28'
 # Keyboard type: 'mac' or 'pc'.
 zstyle ':z4h:bindkey' keyboard  'pc'
 
-# Don't start tmux.
-zstyle ':z4h:' start-tmux       no
-
 # Mark up shell's output with semantic information.
 zstyle ':z4h:' term-shell-integration 'yes'
+
+# Move prompt to the bottom when zsh starts and on Ctrl+L.
+zstyle ':z4h:' prompt-at-bottom 'yes'
 
 # Right-arrow key accepts one character ('partial-accept') from
 # command autosuggestions or the whole thing ('accept')?

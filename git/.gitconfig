@@ -20,3 +20,28 @@
 
 [merge]
   conflictStyle = zdiff3
+
+[pull]
+  rebase = true
+
+[push]
+  autoSetupRemote = true
+
+[commit]
+  verbose = true
+
+[column]
+  ui = auto
+
+[branch]
+  sort = -committerdate
+
+[tag]
+  sort = -version:refname
+
+[diff]
+  algorithm = histogram
+
+[rerere]
+  enabled = true
+  autoupdate = true
